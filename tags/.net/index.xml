@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>.Net on Liam Elliott</title>
-    <link>https://liamelliott.me/tags/.net/</link>
+    <link>https://drafts.liamelliott.me/tags/.net/</link>
     <description>Recent content in .Net on Liam Elliott</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 01 Jun 2020 09:42:48 +0000</lastBuildDate>
     
-	<atom:link href="https://liamelliott.me/tags/.net/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://drafts.liamelliott.me/tags/.net/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>GetHashCode() the easy way</title>
-      <link>https://liamelliott.me/coding/2019-03-06-gethashcode/</link>
+      <link>https://drafts.liamelliott.me/coding/2019-03-06-gethashcode/</link>
       <pubDate>Mon, 01 Jun 2020 09:42:48 +0000</pubDate>
       
-      <guid>https://liamelliott.me/coding/2019-03-06-gethashcode/</guid>
+      <guid>https://drafts.liamelliott.me/coding/2019-03-06-gethashcode/</guid>
       <description>tl;dr Let Visual Studio generate your overrides for Equals() and GetHashCode() so you don&amp;rsquo;t need to remember the best practices.
 Don&amp;rsquo;t roll your own GetHashCode() algorithm or even rely on StackOverflow, use the .net framework to work it out for you..
 HashCode.Combine(Long, Lat, Altitude); Background When trying to check the equality of reference objects in c# we simply cannot apply the &amp;lsquo;==&amp;rsquo; operator, as this will only compare memory locations and not data.</description>

@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>SOLID Principles on Liam Elliott</title>
-    <link>https://liamelliott.me/tags/solid-principles/</link>
+    <link>https://drafts.liamelliott.me/tags/solid-principles/</link>
     <description>Recent content in SOLID Principles on Liam Elliott</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 01 Jun 2020 15:10:00 +0000</lastBuildDate>
     
-	<atom:link href="https://liamelliott.me/tags/solid-principles/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://drafts.liamelliott.me/tags/solid-principles/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Hardcoding. Have your cake and eat it</title>
-      <link>https://liamelliott.me/coding/2020-06-01-hardcoding-have-your-cake/</link>
+      <link>https://drafts.liamelliott.me/coding/2020-06-01-hardcoding-have-your-cake/</link>
       <pubDate>Mon, 01 Jun 2020 15:10:00 +0000</pubDate>
       
-      <guid>https://liamelliott.me/coding/2020-06-01-hardcoding-have-your-cake/</guid>
+      <guid>https://drafts.liamelliott.me/coding/2020-06-01-hardcoding-have-your-cake/</guid>
       <description>As a junior developer, one of the key principles that were drummed into me was that hardcoding values is a BAD thing (amongst many other principles). But then more often than not, the pressures of deadlines, project managers and product owners don&amp;rsquo;t afford us the luxury of building an engineered solution the first time around. So we revert to simply hardcoding just to keep everyone happy and deliver a feature. What no one ever mentions is that there are two ways to hardcode values: the RIGHT way and the WRONG way.</description>
     </item>
     

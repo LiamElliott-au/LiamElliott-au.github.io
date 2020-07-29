@@ -2,30 +2,30 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Coding on Liam Elliott</title>
-    <link>https://liamelliott.me/coding/</link>
+    <link>https://drafts.liamelliott.me/coding/</link>
     <description>Recent content in Coding on Liam Elliott</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 01 Jun 2020 15:10:00 +0000</lastBuildDate>
     
-	<atom:link href="https://liamelliott.me/coding/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://drafts.liamelliott.me/coding/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Hardcoding. Have your cake and eat it</title>
-      <link>https://liamelliott.me/coding/2020-06-01-hardcoding-have-your-cake/</link>
+      <link>https://drafts.liamelliott.me/coding/2020-06-01-hardcoding-have-your-cake/</link>
       <pubDate>Mon, 01 Jun 2020 15:10:00 +0000</pubDate>
       
-      <guid>https://liamelliott.me/coding/2020-06-01-hardcoding-have-your-cake/</guid>
+      <guid>https://drafts.liamelliott.me/coding/2020-06-01-hardcoding-have-your-cake/</guid>
       <description>As a junior developer, one of the key principles that were drummed into me was that hardcoding values is a BAD thing (amongst many other principles). But then more often than not, the pressures of deadlines, project managers and product owners don&amp;rsquo;t afford us the luxury of building an engineered solution the first time around. So we revert to simply hardcoding just to keep everyone happy and deliver a feature. What no one ever mentions is that there are two ways to hardcode values: the RIGHT way and the WRONG way.</description>
     </item>
     
     <item>
       <title>GetHashCode() the easy way</title>
-      <link>https://liamelliott.me/coding/2019-03-06-gethashcode/</link>
+      <link>https://drafts.liamelliott.me/coding/2019-03-06-gethashcode/</link>
       <pubDate>Mon, 01 Jun 2020 09:42:48 +0000</pubDate>
       
-      <guid>https://liamelliott.me/coding/2019-03-06-gethashcode/</guid>
+      <guid>https://drafts.liamelliott.me/coding/2019-03-06-gethashcode/</guid>
       <description>tl;dr Let Visual Studio generate your overrides for Equals() and GetHashCode() so you don&amp;rsquo;t need to remember the best practices.
 Don&amp;rsquo;t roll your own GetHashCode() algorithm or even rely on StackOverflow, use the .net framework to work it out for you..
 HashCode.Combine(Long, Lat, Altitude); Background When trying to check the equality of reference objects in c# we simply cannot apply the &amp;lsquo;==&amp;rsquo; operator, as this will only compare memory locations and not data.</description>
@@ -33,10 +33,10 @@ HashCode.Combine(Long, Lat, Altitude); Background When trying to check the equal
     
     <item>
       <title>Lessons from a successful project</title>
-      <link>https://liamelliott.me/coding/2019-03-08-lessonsfromsuccessfulproject/</link>
+      <link>https://drafts.liamelliott.me/coding/2019-03-08-lessonsfromsuccessfulproject/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://liamelliott.me/coding/2019-03-08-lessonsfromsuccessfulproject/</guid>
+      <guid>https://drafts.liamelliott.me/coding/2019-03-08-lessonsfromsuccessfulproject/</guid>
       <description>&lt;p&gt;A colleague and I recently finished a short 3-week project with a client, the result of which is one very happy client, and an MVP finished before the deadline. Below are the lessons that I learnt during that project.&lt;/p&gt;</description>
     </item>
     
