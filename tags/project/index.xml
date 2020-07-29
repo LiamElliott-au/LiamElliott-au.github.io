@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Project on Liam Elliott</title>
+    <link>https://liamelliott.me/tags/project/</link>
+    <description>Recent content in Project on Liam Elliott</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="https://liamelliott.me/tags/project/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Lessons from a successful project</title>
+      <link>https://liamelliott.me/coding/2019-03-08-lessonsfromsuccessfulproject/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://liamelliott.me/coding/2019-03-08-lessonsfromsuccessfulproject/</guid>
+      <description>&lt;p&gt;A colleague and I recently finished a short 3-week project with a client, the result of which is one very happy client, and an MVP finished before the deadline. Below are the lessons that I learnt during that project.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
