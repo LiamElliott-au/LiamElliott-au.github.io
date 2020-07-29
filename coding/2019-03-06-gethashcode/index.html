@@ -27,8 +27,7 @@
     
     
     <meta property="og:title" content="GetHashCode() the easy way" />
-<meta property="og:description" content="TEST
-tl;dr Let Visual Studio generate your overrides for Equals() and GetHashCode() so you don&rsquo;t need to remember the best practices.
+<meta property="og:description" content="tl;dr Let Visual Studio generate your overrides for Equals() and GetHashCode() so you don&rsquo;t need to remember the best practices.
 Don&rsquo;t roll your own GetHashCode() algorithm or even rely on StackOverflow, use the .net framework to work it out for you..
 HashCode.Combine(Long, Lat, Altitude); Background When trying to check the equality of reference objects in c# we simply cannot apply the &lsquo;==&rsquo; operator, as this will only compare memory locations and not data." />
 <meta property="og:type" content="article" />
@@ -36,21 +35,19 @@ HashCode.Combine(Long, Lat, Altitude); Background When trying to check the equal
 <meta property="article:published_time" content="2020-06-01T09:42:48+00:00" />
 <meta property="article:modified_time" content="2020-06-01T09:42:48+00:00" />
 <meta itemprop="name" content="GetHashCode() the easy way">
-<meta itemprop="description" content="TEST
-tl;dr Let Visual Studio generate your overrides for Equals() and GetHashCode() so you don&rsquo;t need to remember the best practices.
+<meta itemprop="description" content="tl;dr Let Visual Studio generate your overrides for Equals() and GetHashCode() so you don&rsquo;t need to remember the best practices.
 Don&rsquo;t roll your own GetHashCode() algorithm or even rely on StackOverflow, use the .net framework to work it out for you..
 HashCode.Combine(Long, Lat, Altitude); Background When trying to check the equality of reference objects in c# we simply cannot apply the &lsquo;==&rsquo; operator, as this will only compare memory locations and not data.">
 <meta itemprop="datePublished" content="2020-06-01T09:42:48+00:00" />
 <meta itemprop="dateModified" content="2020-06-01T09:42:48+00:00" />
-<meta itemprop="wordCount" content="644">
+<meta itemprop="wordCount" content="643">
 
 
 
 <meta itemprop="keywords" content="c#,GetHashCode,VS2017,VS2019,.Net," />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="GetHashCode() the easy way"/>
-<meta name="twitter:description" content="TEST
-tl;dr Let Visual Studio generate your overrides for Equals() and GetHashCode() so you don&rsquo;t need to remember the best practices.
+<meta name="twitter:description" content="tl;dr Let Visual Studio generate your overrides for Equals() and GetHashCode() so you don&rsquo;t need to remember the best practices.
 Don&rsquo;t roll your own GetHashCode() algorithm or even rely on StackOverflow, use the .net framework to work it out for you..
 HashCode.Combine(Long, Lat, Altitude); Background When trying to check the equality of reference objects in c# we simply cannot apply the &lsquo;==&rsquo; operator, as this will only compare memory locations and not data."/>
 
@@ -148,8 +145,7 @@ HashCode.Combine(Long, Lat, Altitude); Background When trying to check the equal
       
       
     </header>
-    <div class="nested-copy-line-height lh-copy serif f4 nested-links nested-img mid-gray pr4-l w-two-thirds-l"><p>TEST</p>
-<h3 id="tldr">tl;dr</h3>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links nested-img mid-gray pr4-l w-two-thirds-l"><h3 id="tldr">tl;dr</h3>
 <p>Let Visual Studio generate your overrides for Equals() and GetHashCode() so you don&rsquo;t need to remember the best practices.</p>
 <p>Don&rsquo;t roll your own GetHashCode() algorithm or even rely on StackOverflow, use the .net framework to work it out for you..</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp">HashCode.Combine(Long, Lat, Altitude);
