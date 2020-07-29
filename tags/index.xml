@@ -6,7 +6,7 @@
     <description>Recent content in Tags on Liam Elliott</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 01 Jun 2020 15:10:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 01 Jun 2020 09:42:48 +0000</lastBuildDate>
     
 	<atom:link href="https://drafts.liamelliott.me/tags/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,61 +14,16 @@
     <item>
       <title>SOLID Principles</title>
       <link>https://drafts.liamelliott.me/tags/solid-principles/</link>
-      <pubDate>Mon, 01 Jun 2020 15:10:00 +0000</pubDate>
+      <pubDate>Mon, 01 Jun 2020 09:42:48 +0000</pubDate>
       
       <guid>https://drafts.liamelliott.me/tags/solid-principles/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>.Net</title>
-      <link>https://drafts.liamelliott.me/tags/.net/</link>
-      <pubDate>Mon, 01 Jun 2020 09:42:48 +0000</pubDate>
-      
-      <guid>https://drafts.liamelliott.me/tags/.net/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>c#</title>
-      <link>https://drafts.liamelliott.me/tags/c#/</link>
-      <pubDate>Mon, 01 Jun 2020 09:42:48 +0000</pubDate>
-      
-      <guid>https://drafts.liamelliott.me/tags/c#/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>GetHashCode</title>
-      <link>https://drafts.liamelliott.me/tags/gethashcode/</link>
-      <pubDate>Mon, 01 Jun 2020 09:42:48 +0000</pubDate>
-      
-      <guid>https://drafts.liamelliott.me/tags/gethashcode/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>VS2017</title>
-      <link>https://drafts.liamelliott.me/tags/vs2017/</link>
-      <pubDate>Mon, 01 Jun 2020 09:42:48 +0000</pubDate>
-      
-      <guid>https://drafts.liamelliott.me/tags/vs2017/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>VS2019</title>
-      <link>https://drafts.liamelliott.me/tags/vs2019/</link>
-      <pubDate>Mon, 01 Jun 2020 09:42:48 +0000</pubDate>
-      
-      <guid>https://drafts.liamelliott.me/tags/vs2019/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Lessons</title>
       <link>https://drafts.liamelliott.me/tags/lessons/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 08 Mar 2019 09:42:48 +0000</pubDate>
       
       <guid>https://drafts.liamelliott.me/tags/lessons/</guid>
       <description></description>
@@ -77,7 +32,7 @@
     <item>
       <title>Project</title>
       <link>https://drafts.liamelliott.me/tags/project/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 08 Mar 2019 09:42:48 +0000</pubDate>
       
       <guid>https://drafts.liamelliott.me/tags/project/</guid>
       <description></description>
@@ -86,9 +41,54 @@
     <item>
       <title>Success</title>
       <link>https://drafts.liamelliott.me/tags/success/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 08 Mar 2019 09:42:48 +0000</pubDate>
       
       <guid>https://drafts.liamelliott.me/tags/success/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>.Net</title>
+      <link>https://drafts.liamelliott.me/tags/.net/</link>
+      <pubDate>Wed, 06 Mar 2019 09:42:48 +0000</pubDate>
+      
+      <guid>https://drafts.liamelliott.me/tags/.net/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>c#</title>
+      <link>https://drafts.liamelliott.me/tags/c#/</link>
+      <pubDate>Wed, 06 Mar 2019 09:42:48 +0000</pubDate>
+      
+      <guid>https://drafts.liamelliott.me/tags/c#/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>GetHashCode</title>
+      <link>https://drafts.liamelliott.me/tags/gethashcode/</link>
+      <pubDate>Wed, 06 Mar 2019 09:42:48 +0000</pubDate>
+      
+      <guid>https://drafts.liamelliott.me/tags/gethashcode/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>VS2017</title>
+      <link>https://drafts.liamelliott.me/tags/vs2017/</link>
+      <pubDate>Wed, 06 Mar 2019 09:42:48 +0000</pubDate>
+      
+      <guid>https://drafts.liamelliott.me/tags/vs2017/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>VS2019</title>
+      <link>https://drafts.liamelliott.me/tags/vs2019/</link>
+      <pubDate>Wed, 06 Mar 2019 09:42:48 +0000</pubDate>
+      
+      <guid>https://drafts.liamelliott.me/tags/vs2019/</guid>
       <description></description>
     </item>
     
