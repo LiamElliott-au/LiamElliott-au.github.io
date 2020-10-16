@@ -1,0 +1,34 @@
+---
+title: "Implementing Ddd"
+date: 2020-07-30T05:19:13Z
+draft: true
+---
+
+
+## DDD
+
+> DDD gives you both the _strategic and tactical modelling tools_ necessary to design high-quality software that meets core business objectives. <cite>p.g. 2</cite>
+
+> DDD isn't first and foremost about technology. In its central principles, DDD is about discussion, listening, understanding, and business value, all in an effort to centralize knowledge. <cite>p.g. 2 </cite>
+
+p.g. 3: Conversations with Domain experts are a 2-way street, They too _can_ learn about the business from your questions and conversations
+
+## Ubiquituous Language
+
+> It would be a mistake, however, to conclude that the [Ubiquituous] Language is limited to mere words. Just as any human language reflects the minds of those who speak it, the Ubiquituous Language reflects the mental models of the experts of the business domain you are working in. <cite> p.g. xxi</cite>
+
+> The Language is equally as valuable as the various strategic and tactical modelin patterns and in some cases has a more enduring quality. <cite> p.g. xxii </cite>
+
+> Simply stated, practicinf DDD-Lite leads to the construction of inferior domain models. That's because the Ubiquitous Language, Bounded Context, and Context Mapping have so much to offer. You get more than a team lingo. The Language of a team in an explicit Bounded Context expressed as a domain model adds **true business value** and gives certantity that we are implementing the correct software. Even from a technical standpoint, it helps us create better models, ones with more potent behaviors, that are pure and less error prone. <cite> p.g. xxii </cite>
+
+## Aggregates
+
+> An Aggregate is composed of either a single Entity or a cluster of Entities and Value objects that must remain **transactionally consistent** throughout the aggregates lifetime <cite> p.g. xxxix </cite>
+
+## Software model
+
+> The software model - the _way_ the software expresses the solution to the business goal being sought- could still suffer greatly <cite>p.g. 1</cite>
+
+## Domain Model
+
+> <cite>

@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  
+  <title>Ng directive Thought Experiment | Liam Elliott</title>
+  <meta name="viewport" content="width=device-width,minimum-scale=1">
+  <meta name="generator" content="Hugo 0.76.3" />
+  
+  
+  <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+  
+
+  
+  
+  <link href="/dist/css/app.4bd986c7c826760f57a88dd57c7ecbaf.css" rel="stylesheet">
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  <meta property="og:title" content="Ng directive Thought Experiment" />
+<meta property="og:description" content="Not long after publishing my recent post on minimising Async bindings in Angular by using the *ngIf=&ldquo;obs$ | async as obs&rdquo;; construct, I received the following comment on twitter:" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://drafts.liamelliott.me/coding/2018-05-04-ng-directive-thought-experiment/" />
+<meta property="article:published_time" content="2018-05-04T03:12:00+00:00" />
+<meta property="article:modified_time" content="2018-05-04T03:12:00+00:00" />
+<meta itemprop="name" content="Ng directive Thought Experiment">
+<meta itemprop="description" content="Not long after publishing my recent post on minimising Async bindings in Angular by using the *ngIf=&ldquo;obs$ | async as obs&rdquo;; construct, I received the following comment on twitter:">
+<meta itemprop="datePublished" content="2018-05-04T03:12:00+00:00" />
+<meta itemprop="dateModified" content="2018-05-04T03:12:00+00:00" />
+<meta itemprop="wordCount" content="563">
+
+
+
+<meta itemprop="keywords" content="angular," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Ng directive Thought Experiment"/>
+<meta name="twitter:description" content="Not long after publishing my recent post on minimising Async bindings in Angular by using the *ngIf=&ldquo;obs$ | async as obs&rdquo;; construct, I received the following comment on twitter:"/>
+
+  
+</head>
+
+<body
+  class="ma0 avenir bg-near-white DEV">
+
+  
+
+
+
+
+
+<header class="cover bg-top vh-75" style="background-image: url('https://drafts.liamelliott.me/images/headers/mingwei-dong-651090-unsplash.jpg');">
+  <div class="pb3-m pb6-l">
+    <nav class="pv1 ph3 ph4-ns shadow-5 position fixed top-0 w-100 bg-black-40 z-max" style="backdrop-filter: blur(5px);"
+  role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <div class="flex-l items-center">
+      
+ 
+      <ul class="pl0 mr3">
+        <li class="list f6 f4-ns fw4 dib pr3">
+          <a class="hover-white no-underline white-90" href="/" title="Home">
+            Home
+          </a>
+        </li>
+        
+        <li class="list f6 f4-ns fw4 dib pr3">
+          <a class="hover-white no-underline white-90" href="/about/" title="About page">
+            About
+          </a>
+        </li>
+        
+        <li class="list f6 f4-ns fw4 dib pr3">
+          <a class="hover-white no-underline white-90" href="/coding/" title="Code page">
+            Code
+          </a>
+        </li>
+        
+        <li class="list f6 f4-ns fw4 dib pr3">
+          <a class="hover-white no-underline white-90" href="/listening/" title="Listening page">
+            Listening
+          </a>
+        </li>
+        
+        <li class="list f6 f4-ns fw4 dib pr3">
+          <a class="hover-white no-underline white-90" href="/personal/" title="Personal page">
+            Personal
+          </a>
+        </li>
+        
+        <li class="list f6 f4-ns fw4 dib pr3">
+          <a class="hover-white no-underline white-90" href="/reading/" title="Reading page">
+            Reading
+          </a>
+        </li>
+        
+        <li class="list f6 f4-ns fw4 dib pr3">
+          <a class="hover-white no-underline white-90" href="/videos/" title="Videos page">
+            Videos
+          </a>
+        </li>
+        
+      </ul>
+      
+    </div>
+    <div class="flex-l items-center">
+      
+
+
+
+
+<a href="https://twitter.com/LiamElliott_au" target="_blank" class="link-transition twitter link dib z-999 pt3 pt0-l mr1" title="Twitter link" rel="noopener" aria-label="follow on Twitter——Opens in a new window">
+  <svg height="32px"  style="enable-background:new 0 0 67 67;" version="1.1" viewBox="0 0 67 67" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M37.167,22.283c-2.619,0.953-4.274,3.411-4.086,6.101  l0.063,1.038l-1.048-0.127c-3.813-0.487-7.145-2.139-9.974-4.915l-1.383-1.377l-0.356,1.017c-0.754,2.267-0.272,4.661,1.299,6.271  c0.838,0.89,0.649,1.017-0.796,0.487c-0.503-0.169-0.943-0.296-0.985-0.233c-0.146,0.149,0.356,2.076,0.754,2.839  c0.545,1.06,1.655,2.097,2.871,2.712l1.027,0.487l-1.215,0.021c-1.173,0-1.215,0.021-1.089,0.467  c0.419,1.377,2.074,2.839,3.918,3.475l1.299,0.444l-1.131,0.678c-1.676,0.976-3.646,1.526-5.616,1.568  C19.775,43.256,19,43.341,19,43.405c0,0.211,2.557,1.397,4.044,1.864c4.463,1.377,9.765,0.783,13.746-1.568  c2.829-1.673,5.657-5,6.978-8.221c0.713-1.716,1.425-4.851,1.425-6.354c0-0.975,0.063-1.102,1.236-2.267  c0.692-0.678,1.341-1.419,1.467-1.631c0.21-0.403,0.188-0.403-0.88-0.043c-1.781,0.636-2.033,0.551-1.152-0.402  c0.649-0.678,1.425-1.907,1.425-2.267c0-0.063-0.314,0.042-0.671,0.233c-0.377,0.212-1.215,0.53-1.844,0.72l-1.131,0.361l-1.027-0.7  c-0.566-0.381-1.361-0.805-1.781-0.932C39.766,21.902,38.131,21.944,37.167,22.283z M33,64C16.432,64,3,50.569,3,34S16.432,4,33,4  s30,13.431,30,30S49.568,64,33,64z" style="fill-rule:evenodd;clip-rule:evenodd;fill:;"/></svg>
+
+<span class="new-window"><svg  height="8px"  style="enable-background:new 0 0 1000 1000;" version="1.1" viewBox="0 0 1000 1000" width="8px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+<path d="M598 128h298v298h-86v-152l-418 418-60-60 418-418h-152v-86zM810 810v-298h86v298c0 46-40 86-86 86h-596c-48 0-86-40-86-86v-596c0-46 38-86 86-86h298v86h-298v596h596z" style="fill-rule:evenodd;clip-rule:evenodd;fill:;"/>
+</svg>
+</span></a>
+
+
+
+
+<a href="https://www.linkedin.com/in/liamelliott/" target="_blank" class="link-transition linkedin link dib z-999 pt3 pt0-l mr1" title="LinkedIn link" rel="noopener" aria-label="follow on LinkedIn——Opens in a new window">
+  <svg  height="32px"  style="enable-background:new 0 0 65 65;" version="1.1" viewBox="0 0 65 65" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <path d="M50.837,48.137V36.425c0-6.275-3.35-9.195-7.816-9.195  c-3.604,0-5.219,1.983-6.119,3.374V27.71h-6.79c0.09,1.917,0,20.427,0,20.427h6.79V36.729c0-0.609,0.044-1.219,0.224-1.655  c0.49-1.22,1.607-2.483,3.482-2.483c2.458,0,3.44,1.873,3.44,4.618v10.929H50.837z M22.959,24.922c2.367,0,3.842-1.57,3.842-3.531  c-0.044-2.003-1.475-3.528-3.797-3.528s-3.841,1.524-3.841,3.528c0,1.961,1.474,3.531,3.753,3.531H22.959z M34,64  C17.432,64,4,50.568,4,34C4,17.431,17.432,4,34,4s30,13.431,30,30C64,50.568,50.568,64,34,64z M26.354,48.137V27.71h-6.789v20.427  H26.354z" style="fill-rule:evenodd;clip-rule:evenodd;fill:;"/>
+</svg>
+
+<span class="new-window"><svg  height="8px"  style="enable-background:new 0 0 1000 1000;" version="1.1" viewBox="0 0 1000 1000" width="8px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+<path d="M598 128h298v298h-86v-152l-418 418-60-60 418-418h-152v-86zM810 810v-298h86v298c0 46-40 86-86 86h-596c-48 0-86-40-86-86v-596c0-46 38-86 86-86h298v86h-298v596h596z" style="fill-rule:evenodd;clip-rule:evenodd;fill:;"/>
+</svg>
+</span></a>
+
+
+<a href="https://github.com/LiamElliott-au" target="_blank" class="link-transition github link dib z-999 pt3 pt0-l mr1" title="Github link" rel="noopener" aria-label="follow on Github——Opens in a new window">
+  <svg  height="32px"  style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+  <path d="M256,32C132.3,32,32,134.8,32,261.7c0,101.5,64.2,187.5,153.2,217.9c11.2,2.1,15.3-5,15.3-11.1   c0-5.5-0.2-19.9-0.3-39.1c-62.3,13.9-75.5-30.8-75.5-30.8c-10.2-26.5-24.9-33.6-24.9-33.6c-20.3-14.3,1.5-14,1.5-14   c22.5,1.6,34.3,23.7,34.3,23.7c20,35.1,52.4,25,65.2,19.1c2-14.8,7.8-25,14.2-30.7c-49.7-5.8-102-25.5-102-113.5   c0-25.1,8.7-45.6,23-61.6c-2.3-5.8-10-29.2,2.2-60.8c0,0,18.8-6.2,61.6,23.5c17.9-5.1,37-7.6,56.1-7.7c19,0.1,38.2,2.6,56.1,7.7   c42.8-29.7,61.5-23.5,61.5-23.5c12.2,31.6,4.5,55,2.2,60.8c14.3,16.1,23,36.6,23,61.6c0,88.2-52.4,107.6-102.3,113.3   c8,7.1,15.2,21.1,15.2,42.5c0,30.7-0.3,55.5-0.3,63c0,6.1,4,13.3,15.4,11C415.9,449.1,480,363.1,480,261.7   C480,134.8,379.7,32,256,32z"/>
+</svg>
+
+<span class="new-window"><svg  height="8px"  style="enable-background:new 0 0 1000 1000;" version="1.1" viewBox="0 0 1000 1000" width="8px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+<path d="M598 128h298v298h-86v-152l-418 418-60-60 418-418h-152v-86zM810 810v-298h86v298c0 46-40 86-86 86h-596c-48 0-86-40-86-86v-596c0-46 38-86 86-86h298v86h-298v596h596z" style="fill-rule:evenodd;clip-rule:evenodd;fill:;"/>
+</svg>
+</span></a>
+
+
+
+
+
+
+
+<a href="index.xml" target="_blank" class="link-transition rss link dib z-999 pt3 pt0-l mr1" title="RSS link" rel="noopener" aria-label="RSS——Opens in a new window">
+  <svg xmlns="http://www.w3.org/2000/svg" height="32px" width="32px" viewBox="0 0 24 24">
+    <circle cx="6.18" cy="17.82" r="2.18"/>
+    <path id="scale" d="M4 4.44v2.83c7.03 0 12.73 5.7 12.73 12.73h2.83c0-8.59-6.97-15.56-15.56-15.56zm0 5.66v2.83c3.9 0 7.07 3.17 7.07 7.07h2.83c0-5.47-4.43-9.9-9.9-9.9z"/>
+</svg>
+
+
+<span class="new-window"><svg  height="8px"  style="enable-background:new 0 0 1000 1000;" version="1.1" viewBox="0 0 1000 1000" width="8px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+<path d="M598 128h298v298h-86v-152l-418 418-60-60 418-418h-152v-86zM810 810v-298h86v298c0 46-40 86-86 86h-596c-48 0-86-40-86-86v-596c0-46 38-86 86-86h298v86h-298v596h596z" style="fill-rule:evenodd;clip-rule:evenodd;fill:;"/>
+</svg>
+</span></a>
+
+
+    </div>
+  </div>
+</nav>
+    <div class="tc-l pv6 ph3 ph4-ns">
+      
+    </div>
+  </div>
+</header>
+
+<a href="https://unsplash.com/photos/s1bmsm6VcLE "
+  class="attribution light-silver">Photo by Mingwei Dong on Unsplash</a>
+
+</div>
+
+
+  <main class="" role="main">
+    
+
+<article class="flex-l flex-wrap justify-between w-75 center ph3 mb-0">
+  <div class="serif f4 mid-gray pr4-l w-two-thirds-l">
+
+    <header class="mt3 w-100">
+      <h1>Ng directive Thought Experiment</h1>
+      <div class="flex justify-between">
+        <div>
+          <time class="f5  dib tracked gray"
+            datetime="2018-05-04T03:12:00Z">May 4, 2018</time>
+          
+          <a style="text-decoration-style: dotted;text-decoration-line: underline;"
+            class="hover-gray gray helvetica b tracked ml4" href="/coding/" title="Code page">
+            CODE
+          </a>
+          
+        </div>
+
+
+
+
+<div id="sharing">
+
+  
+  <a href="https://www.facebook.com/sharer.php?u=https://drafts.liamelliott.me/coding/2018-05-04-ng-directive-thought-experiment/" class="facebook no-underline" aria-label="share on Facebook">
+    <svg height="32px"  style="enable-background:new 0 0 67 67;" version="1.1" viewBox="0 0 67 67" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M28.765,50.32h6.744V33.998h4.499l0.596-5.624h-5.095  l0.007-2.816c0-1.466,0.14-2.253,2.244-2.253h2.812V17.68h-4.5c-5.405,0-7.307,2.729-7.307,7.317v3.377h-3.369v5.625h3.369V50.32z   M33,64C16.432,64,3,50.569,3,34S16.432,4,33,4s30,13.431,30,30S49.568,64,33,64z" style="fill-rule:evenodd;clip-rule:evenodd;"/></svg>
+
+  </a>
+
+  
+  
+  <a href="https://twitter.com/share?url=https://drafts.liamelliott.me/coding/2018-05-04-ng-directive-thought-experiment/&amp;text=Ng%20directive%20Thought%20Experiment" class="twitter no-underline" aria-label="share on Twitter">
+    <svg height="32px"  style="enable-background:new 0 0 67 67;" version="1.1" viewBox="0 0 67 67" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M37.167,22.283c-2.619,0.953-4.274,3.411-4.086,6.101  l0.063,1.038l-1.048-0.127c-3.813-0.487-7.145-2.139-9.974-4.915l-1.383-1.377l-0.356,1.017c-0.754,2.267-0.272,4.661,1.299,6.271  c0.838,0.89,0.649,1.017-0.796,0.487c-0.503-0.169-0.943-0.296-0.985-0.233c-0.146,0.149,0.356,2.076,0.754,2.839  c0.545,1.06,1.655,2.097,2.871,2.712l1.027,0.487l-1.215,0.021c-1.173,0-1.215,0.021-1.089,0.467  c0.419,1.377,2.074,2.839,3.918,3.475l1.299,0.444l-1.131,0.678c-1.676,0.976-3.646,1.526-5.616,1.568  C19.775,43.256,19,43.341,19,43.405c0,0.211,2.557,1.397,4.044,1.864c4.463,1.377,9.765,0.783,13.746-1.568  c2.829-1.673,5.657-5,6.978-8.221c0.713-1.716,1.425-4.851,1.425-6.354c0-0.975,0.063-1.102,1.236-2.267  c0.692-0.678,1.341-1.419,1.467-1.631c0.21-0.403,0.188-0.403-0.88-0.043c-1.781,0.636-2.033,0.551-1.152-0.402  c0.649-0.678,1.425-1.907,1.425-2.267c0-0.063-0.314,0.042-0.671,0.233c-0.377,0.212-1.215,0.53-1.844,0.72l-1.131,0.361l-1.027-0.7  c-0.566-0.381-1.361-0.805-1.781-0.932C39.766,21.902,38.131,21.944,37.167,22.283z M33,64C16.432,64,3,50.569,3,34S16.432,4,33,4  s30,13.431,30,30S49.568,64,33,64z" style="fill-rule:evenodd;clip-rule:evenodd;fill:;"/></svg>
+
+  </a>
+
+  
+  <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://drafts.liamelliott.me/coding/2018-05-04-ng-directive-thought-experiment/&amp;title=Ng%20directive%20Thought%20Experiment" class="linkedin no-underline" aria-label="share on LinkedIn">
+    <svg  height="32px"  style="enable-background:new 0 0 65 65;" version="1.1" viewBox="0 0 65 65" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <path d="M50.837,48.137V36.425c0-6.275-3.35-9.195-7.816-9.195  c-3.604,0-5.219,1.983-6.119,3.374V27.71h-6.79c0.09,1.917,0,20.427,0,20.427h6.79V36.729c0-0.609,0.044-1.219,0.224-1.655  c0.49-1.22,1.607-2.483,3.482-2.483c2.458,0,3.44,1.873,3.44,4.618v10.929H50.837z M22.959,24.922c2.367,0,3.842-1.57,3.842-3.531  c-0.044-2.003-1.475-3.528-3.797-3.528s-3.841,1.524-3.841,3.528c0,1.961,1.474,3.531,3.753,3.531H22.959z M34,64  C17.432,64,4,50.568,4,34C4,17.431,17.432,4,34,4s30,13.431,30,30C64,50.568,50.568,64,34,64z M26.354,48.137V27.71h-6.789v20.427  H26.354z" style="fill-rule:evenodd;clip-rule:evenodd;fill:;"/>
+</svg>
+
+  </a>
+</div>
+</div><ul class="pa0 mv0 flex flex-wrap b tracked ">
+  
+  <li class="list">
+    <a href="/tags/angular" class="link f6  mr2 light-silver sans-serif"
+      style="text-decoration-style: dotted;text-decoration-line: underline;">angular</a>
+  </li>
+  
+</ul>
+      
+    </header>
+    <div
+      class="nested-copy-line-height lh-copy serif f4 nested-links nested-img mid-gray">
+      <p>Not long after publishing my recent post on minimising Async bindings in Angular by using the *ngIf=&ldquo;obs$ | async as obs&rdquo;; construct, I received the following comment on twitter:</p>
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">it&#39;s a pity they enabled the &quot;let&quot; option on ngif .<br>what if i dont want to hide the section before the data arrive ?</p>&mdash; The IL Place (@TheIlPlace) <a href="https://twitter.com/TheIlPlace/status/991784139941609477?ref_src=twsrc%5Etfw">May 2, 2018</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<p>This got me thinking&hellip; Is there an existing way to do this? Is it possible? and even is it useful?
+After looking around into the ngIf documentation on <a href="http://Angular.io">Angular.io</a> <a href="https://angular.io/guide/structural-directives">Structural Drirectives</a> and then into the <a href="https://github.com/angular/angular">ngIf directive source</a>/packages/common/src/directives/ng_if.ts, I figured it couldn&rsquo;t be too hard to create a &ldquo;Let&rdquo; directive&hellip;
+As it turns out a Let directive is exactly the same as the ngIf directive without the &ldquo;<em>else</em>&rdquo;&hellip;</p>
+<p>Acknowledgement: None of this is my code, I&rsquo;ve just borrowed it from the existing ngIf directive</p>
+<h3 id="so-lets-try">So let&rsquo;s try</h3>
+<p><em>Step 1:</em> Generate the directive</p>
+<pre><code>ng g directive ngLet
+</code></pre><p><em>Step 2:</em> Borrowing from ngIf, create an NgLetContext</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-typescript" data-lang="typescript"><span style="color:#66d9ef">export</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">ngLetContext</span> {
+  <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">$implicit</span>: <span style="color:#66d9ef">any</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">null</span>;
+  <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">ngLet</span>: <span style="color:#66d9ef">any</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">null</span>;
+}
+</code></pre></div><p><em>Step 3:</em> Declare and initialise local variables</p>
+<p>a. The current context
+b. Reference to the template
+c. Reference to the currently embedded view</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-typescript" data-lang="typescript"><span style="color:#66d9ef">private</span> <span style="color:#a6e22e">_thenTemplateRef</span>: <span style="color:#66d9ef">TemplateRef</span>&lt;<span style="color:#f92672">ngLetContext</span>&gt; <span style="color:#f92672">|</span> <span style="color:#66d9ef">null</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">null</span>;
+<span style="color:#66d9ef">private</span> <span style="color:#a6e22e">_thenViewRef</span>: <span style="color:#66d9ef">EmbeddedViewRef</span>&lt;<span style="color:#f92672">ngLetContext</span>&gt; <span style="color:#f92672">|</span> <span style="color:#66d9ef">null</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">null</span>;
+<span style="color:#66d9ef">private</span> <span style="color:#a6e22e">_context</span>: <span style="color:#66d9ef">ngLetContext</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">DhsLetContext</span>();
+</code></pre></div><p><em>Step 4:</em> Inject into the constructor a &ldquo;ViewContainerRef&rdquo; and a &ldquo;TemplateRef<ngLetContext>&rdquo; and initialise our templateRef</p>
+<p>a. The ViewContainerRef, is a reference to where our rendered view will be hosted</p>
+<p>b. the TemplateRef, is a reference to the template within of our content</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-typescript" data-lang="typescript"><span style="color:#66d9ef">constructor</span>(<span style="color:#66d9ef">private</span> <span style="color:#a6e22e">_viewContainer</span>: <span style="color:#66d9ef">ViewContainerRef</span>, <span style="color:#a6e22e">templateRef</span>: <span style="color:#66d9ef">TemplateRef</span>&lt;<span style="color:#f92672">ngLetContext</span>&gt;) {
+   <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">_thenTemplateRef</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">templateRef</span>;
+}
+</code></pre></div><p><em>Step 5:</em> Define an Input property to accept the binding and update the view ref</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-typescript" data-lang="typescript"><span style="color:#66d9ef">@Input</span>() <span style="color:#66d9ef">set</span> <span style="color:#a6e22e">ngLet</span>(<span style="color:#a6e22e">condition</span>: <span style="color:#66d9ef">any</span>) {
+    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">_context</span>.<span style="color:#a6e22e">$implicit</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">_context</span>.<span style="color:#a6e22e">ngLet</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">condition</span>;
+    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">_updateView</span>();
+  }
+</code></pre></div><p><em>Step 6:</em> Update the current view</p>
+<p>If there is a condition to evaluate, and we don&rsquo;t already have a view, then ask our host container to create one based on our template and set the context.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-typescript" data-lang="typescript"><span style="color:#66d9ef">private</span> <span style="color:#a6e22e">_updateView() {</span>
+   <span style="color:#66d9ef">if</span> (<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">_context</span>.<span style="color:#a6e22e">$implicit</span>) {
+     <span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span><span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">_thenViewRef</span>) {
+       <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">_viewContainer</span>.<span style="color:#a6e22e">clear</span>();
+       <span style="color:#66d9ef">if</span> (<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">_thenTemplateRef</span>) {
+         <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">_thenViewRef</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">_viewContainer</span>.<span style="color:#a6e22e">createEmbeddedView</span>(<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">_thenTemplateRef</span>, <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">_context</span>);
+       }
+     }
+   }
+ }
+</code></pre></div><p><em>Step 7:</em> Ensure the directive is declared in your module (this should be done for you if you used the cli to generate the directive for you)</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-typescript" data-lang="typescript"><span style="color:#66d9ef">@NgModule</span>({
+  <span style="color:#a6e22e">declarations</span><span style="color:#f92672">:</span> [
+    <span style="color:#a6e22e">AppComponent</span>,
+    <span style="color:#a6e22e">NgLet</span>
+    ],
+</code></pre></div><h4 id="final-step-put-it-to-use">Final step: Put it to use</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">div</span> <span style="color:#960050;background-color:#1e0010">*</span><span style="color:#a6e22e">ngLet</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;person$ | async as person&#34;</span>&gt;
+    {{person?.name}}
+&lt;/<span style="color:#f92672">div</span>&gt;
+</code></pre></div><h3 id="final-directive-class">Final directive class</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-typescript" data-lang="typescript"><span style="color:#66d9ef">import</span> { <span style="color:#a6e22e">Directive</span>, <span style="color:#a6e22e">ViewContainerRef</span>, <span style="color:#a6e22e">TemplateRef</span>, <span style="color:#a6e22e">Input</span>, <span style="color:#a6e22e">EmbeddedViewRef</span> } <span style="color:#66d9ef">from</span> <span style="color:#e6db74">&#39;@angular/core&#39;</span>;
+
+<span style="color:#66d9ef">@Directive</span>({
+  <span style="color:#a6e22e">selector</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;[ngLet]&#39;</span>
+})
+<span style="color:#66d9ef">export</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">LetDirective</span> {
+
+  <span style="color:#66d9ef">private</span> <span style="color:#a6e22e">_thenTemplateRef</span>: <span style="color:#66d9ef">TemplateRef</span>&lt;<span style="color:#f92672">NgLetContext</span>&gt; <span style="color:#f92672">|</span> <span style="color:#66d9ef">null</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">null</span>;
+  <span style="color:#66d9ef">private</span> <span style="color:#a6e22e">_thenViewRef</span>: <span style="color:#66d9ef">EmbeddedViewRef</span>&lt;<span style="color:#f92672">NgLetContext</span>&gt; <span style="color:#f92672">|</span> <span style="color:#66d9ef">null</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">null</span>;
+  <span style="color:#66d9ef">private</span> <span style="color:#a6e22e">_context</span>: <span style="color:#66d9ef">NgLetContext</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">NgLetContext</span>();
+
+  <span style="color:#66d9ef">constructor</span>(<span style="color:#66d9ef">private</span> <span style="color:#a6e22e">_viewContainer</span>: <span style="color:#66d9ef">ViewContainerRef</span>, <span style="color:#a6e22e">templateRef</span>: <span style="color:#66d9ef">TemplateRef</span>&lt;<span style="color:#f92672">NgLetContext</span>&gt;) {
+    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">_thenTemplateRef</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">templateRef</span>;
+  }
+
+  <span style="color:#66d9ef">@Input</span>()
+  <span style="color:#66d9ef">set</span> <span style="color:#a6e22e">ngLet</span>(<span style="color:#a6e22e">condition</span>: <span style="color:#66d9ef">any</span>) {
+    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">_context</span>.<span style="color:#a6e22e">$implicit</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">_context</span>.<span style="color:#a6e22e">ngLet</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">condition</span>;
+    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">_updateView</span>();
+  }
+  <span style="color:#66d9ef">private</span> <span style="color:#a6e22e">_updateView() {</span>
+    <span style="color:#66d9ef">if</span> (<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">_context</span>.<span style="color:#a6e22e">$implicit</span>) {
+      <span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span><span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">_thenViewRef</span>) {
+        <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">_viewContainer</span>.<span style="color:#a6e22e">clear</span>();
+        <span style="color:#66d9ef">if</span> (<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">_thenTemplateRef</span>) {
+          <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">_thenViewRef</span> <span style="color:#f92672">=</span>
+              <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">_viewContainer</span>.<span style="color:#a6e22e">createEmbeddedView</span>(<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">_thenTemplateRef</span>, <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">_context</span>);
+        }
+      }
+    }
+  }
+}
+
+<span style="color:#66d9ef">export</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">NgLetContext</span> {
+  <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">$implicit</span>: <span style="color:#66d9ef">any</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">null</span>;
+  <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">ngLet</span>: <span style="color:#66d9ef">any</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">null</span>;
+}
+</code></pre></div><h2 id="final-thoughts">Final thoughts</h2>
+<p>Although it is possible to create a &ldquo;Let&rdquo; directive, I&rsquo;m not quite convinced on it&rsquo;s usefulness at this stage, as each inner binding will require the &lsquo;?.&rsquo; null check to avoid a &lsquo;name not found on undefined&quot; binding error and the issues associated with such binding errors.
+Either way, thanks for the challenge <a href="https://twitter.com/mayeast">@mayeast</a></p><div class="mt6 instapaper_ignoref">
+        
+        
+      </div>
+    </div>
+  </div>
+  <aside class="w-30-l mt4"><div class="br3 ba b--moon-gray bg-light-gray ph4 mid-gray">
+  <h2 class="tracked flex justify-between items-end">
+    About
+    <img class="br-100 h3 w3 dib" src="/images/head.jpg" />
+  </h2>
+  <hr />
+
+  <p class="lh-copy">
+    Hi, I am <strong>Liam Elliott</strong>. Father of 2, Trail runner and
+    Solution Architect at SSW here in Sydney. With over 12 years of experience
+    developing enterprise applications, primarily in AspNet Core and Angular.
+    <a href="/about">more...</a>
+  </p>
+</div></aside><footer>
+    <p></p>
+    <h4>Share</h4>
+
+
+
+
+<div id="sharing">
+
+  
+  <a href="https://www.facebook.com/sharer.php?u=https://drafts.liamelliott.me/coding/2018-05-04-ng-directive-thought-experiment/" class="facebook no-underline" aria-label="share on Facebook">
+    <svg height="32px"  style="enable-background:new 0 0 67 67;" version="1.1" viewBox="0 0 67 67" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M28.765,50.32h6.744V33.998h4.499l0.596-5.624h-5.095  l0.007-2.816c0-1.466,0.14-2.253,2.244-2.253h2.812V17.68h-4.5c-5.405,0-7.307,2.729-7.307,7.317v3.377h-3.369v5.625h3.369V50.32z   M33,64C16.432,64,3,50.569,3,34S16.432,4,33,4s30,13.431,30,30S49.568,64,33,64z" style="fill-rule:evenodd;clip-rule:evenodd;"/></svg>
+
+  </a>
+
+  
+  
+  <a href="https://twitter.com/share?url=https://drafts.liamelliott.me/coding/2018-05-04-ng-directive-thought-experiment/&amp;text=Ng%20directive%20Thought%20Experiment" class="twitter no-underline" aria-label="share on Twitter">
+    <svg height="32px"  style="enable-background:new 0 0 67 67;" version="1.1" viewBox="0 0 67 67" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M37.167,22.283c-2.619,0.953-4.274,3.411-4.086,6.101  l0.063,1.038l-1.048-0.127c-3.813-0.487-7.145-2.139-9.974-4.915l-1.383-1.377l-0.356,1.017c-0.754,2.267-0.272,4.661,1.299,6.271  c0.838,0.89,0.649,1.017-0.796,0.487c-0.503-0.169-0.943-0.296-0.985-0.233c-0.146,0.149,0.356,2.076,0.754,2.839  c0.545,1.06,1.655,2.097,2.871,2.712l1.027,0.487l-1.215,0.021c-1.173,0-1.215,0.021-1.089,0.467  c0.419,1.377,2.074,2.839,3.918,3.475l1.299,0.444l-1.131,0.678c-1.676,0.976-3.646,1.526-5.616,1.568  C19.775,43.256,19,43.341,19,43.405c0,0.211,2.557,1.397,4.044,1.864c4.463,1.377,9.765,0.783,13.746-1.568  c2.829-1.673,5.657-5,6.978-8.221c0.713-1.716,1.425-4.851,1.425-6.354c0-0.975,0.063-1.102,1.236-2.267  c0.692-0.678,1.341-1.419,1.467-1.631c0.21-0.403,0.188-0.403-0.88-0.043c-1.781,0.636-2.033,0.551-1.152-0.402  c0.649-0.678,1.425-1.907,1.425-2.267c0-0.063-0.314,0.042-0.671,0.233c-0.377,0.212-1.215,0.53-1.844,0.72l-1.131,0.361l-1.027-0.7  c-0.566-0.381-1.361-0.805-1.781-0.932C39.766,21.902,38.131,21.944,37.167,22.283z M33,64C16.432,64,3,50.569,3,34S16.432,4,33,4  s30,13.431,30,30S49.568,64,33,64z" style="fill-rule:evenodd;clip-rule:evenodd;fill:;"/></svg>
+
+  </a>
+
+  
+  <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://drafts.liamelliott.me/coding/2018-05-04-ng-directive-thought-experiment/&amp;title=Ng%20directive%20Thought%20Experiment" class="linkedin no-underline" aria-label="share on LinkedIn">
+    <svg  height="32px"  style="enable-background:new 0 0 65 65;" version="1.1" viewBox="0 0 65 65" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <path d="M50.837,48.137V36.425c0-6.275-3.35-9.195-7.816-9.195  c-3.604,0-5.219,1.983-6.119,3.374V27.71h-6.79c0.09,1.917,0,20.427,0,20.427h6.79V36.729c0-0.609,0.044-1.219,0.224-1.655  c0.49-1.22,1.607-2.483,3.482-2.483c2.458,0,3.44,1.873,3.44,4.618v10.929H50.837z M22.959,24.922c2.367,0,3.842-1.57,3.842-3.531  c-0.044-2.003-1.475-3.528-3.797-3.528s-3.841,1.524-3.841,3.528c0,1.961,1.474,3.531,3.753,3.531H22.959z M34,64  C17.432,64,4,50.568,4,34C4,17.431,17.432,4,34,4s30,13.431,30,30C64,50.568,50.568,64,34,64z M26.354,48.137V27.71h-6.789v20.427  H26.354z" style="fill-rule:evenodd;clip-rule:evenodd;fill:;"/>
+</svg>
+
+  </a>
+</div>
+<hr />
+    
+    <h2>More from Code</h2>
+    
+
+    <div class="flex-ns flex-wrap justify-around">
+        
+<article class="br2 ba dark-gray b--black-10 mv3 mh2 w-100 w-50-m w-25-l mw6 ">
+  
+  
+  
+  <a href="https://drafts.liamelliott.me/coding/2018-05-01-angular-too-many-async-bindings/">
+    <img src="https://drafts.liamelliott.me/images/headers/john-westrock-647093-unsplash.jpg" class="db w-100 br2 br--top h5" style="object-fit: cover;"
+      alt="image from Angular: arrrgh... too many async bindings">
+  </a>
+  
+
+  <div class="pa2 ph3-ns pb3-ns">
+    <h1 class="f5 f4-ns w-100 mt1 mb0">Angular: arrrgh... too many async bindings</h1>
+    <h2 class="f7 f6-ns mt-0 gray">May 1, 2018</h2>
+    <p class="f6 lh-copy measure mt2 mid-gray">
+      In my previous post I came across a quirk with Angular, Observables and the Async pipe. That is, each subscription to an observable will initiate the observables execution. Hence we were calling the api once per async subscription.
+ A subscribe call is simply a way to start an &ldquo;Observable execution&rdquo; and deliver values or events to an Observer of that execution. http://reactivex.io
+ Original version &lt;p&gt;{{ (result$ | async).name }}&lt;/p&gt; &lt;p&gt;{{ (result$ | async).
+    </p>
+  </div>
+  <a class="" href="https://drafts.liamelliott.me/coding/2018-05-01-angular-too-many-async-bindings/"> more...</a>
+</article>
+
+        
+<article class="br2 ba dark-gray b--black-10 mv3 mh2 w-100 w-50-m w-25-l mw6 ">
+  
+  
+  
+  <a href="https://drafts.liamelliott.me/coding/2018-05-31-angular6-runtime-environment-variables/">
+    <img src="https://drafts.liamelliott.me/images/headers/kristaps-grundsteins-548978-unsplash.jpg" class="db w-100 br2 br--top h5" style="object-fit: cover;"
+      alt="image from Angular6 Runtime environment Variables">
+  </a>
+  
+
+  <div class="pa2 ph3-ns pb3-ns">
+    <h1 class="f5 f4-ns w-100 mt1 mb0">Angular6 Runtime environment Variables</h1>
+    <h2 class="f7 f6-ns mt-0 gray">May 31, 2018</h2>
+    <p class="f6 lh-copy measure mt2 mid-gray">
+      <p>Out of the box, Angular provides a convenient method for setting environment variables for each our local dev environment and our production environment.</p>
+    </p>
+  </div>
+  <a class="" href="https://drafts.liamelliott.me/coding/2018-05-31-angular6-runtime-environment-variables/"> more...</a>
+</article>
+    </div>
+</footer></article>
+
+
+
+  </main>
+  <footer class="bg-black bottom-0 w-100 pa2" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f6 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://drafts.liamelliott.me/" >
+    &copy;  Liam Elliott 2020 
+  </a>
+    <div>
+
+
+
+
+<a href="https://twitter.com/LiamElliott_au" target="_blank" class="link-transition twitter link dib z-999 pt3 pt0-l mr1" title="Twitter link" rel="noopener" aria-label="follow on Twitter——Opens in a new window">
+  <svg height="32px"  style="enable-background:new 0 0 67 67;" version="1.1" viewBox="0 0 67 67" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M37.167,22.283c-2.619,0.953-4.274,3.411-4.086,6.101  l0.063,1.038l-1.048-0.127c-3.813-0.487-7.145-2.139-9.974-4.915l-1.383-1.377l-0.356,1.017c-0.754,2.267-0.272,4.661,1.299,6.271  c0.838,0.89,0.649,1.017-0.796,0.487c-0.503-0.169-0.943-0.296-0.985-0.233c-0.146,0.149,0.356,2.076,0.754,2.839  c0.545,1.06,1.655,2.097,2.871,2.712l1.027,0.487l-1.215,0.021c-1.173,0-1.215,0.021-1.089,0.467  c0.419,1.377,2.074,2.839,3.918,3.475l1.299,0.444l-1.131,0.678c-1.676,0.976-3.646,1.526-5.616,1.568  C19.775,43.256,19,43.341,19,43.405c0,0.211,2.557,1.397,4.044,1.864c4.463,1.377,9.765,0.783,13.746-1.568  c2.829-1.673,5.657-5,6.978-8.221c0.713-1.716,1.425-4.851,1.425-6.354c0-0.975,0.063-1.102,1.236-2.267  c0.692-0.678,1.341-1.419,1.467-1.631c0.21-0.403,0.188-0.403-0.88-0.043c-1.781,0.636-2.033,0.551-1.152-0.402  c0.649-0.678,1.425-1.907,1.425-2.267c0-0.063-0.314,0.042-0.671,0.233c-0.377,0.212-1.215,0.53-1.844,0.72l-1.131,0.361l-1.027-0.7  c-0.566-0.381-1.361-0.805-1.781-0.932C39.766,21.902,38.131,21.944,37.167,22.283z M33,64C16.432,64,3,50.569,3,34S16.432,4,33,4  s30,13.431,30,30S49.568,64,33,64z" style="fill-rule:evenodd;clip-rule:evenodd;fill:;"/></svg>
+
+<span class="new-window"><svg  height="8px"  style="enable-background:new 0 0 1000 1000;" version="1.1" viewBox="0 0 1000 1000" width="8px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+<path d="M598 128h298v298h-86v-152l-418 418-60-60 418-418h-152v-86zM810 810v-298h86v298c0 46-40 86-86 86h-596c-48 0-86-40-86-86v-596c0-46 38-86 86-86h298v86h-298v596h596z" style="fill-rule:evenodd;clip-rule:evenodd;fill:;"/>
+</svg>
+</span></a>
+
+
+
+
+<a href="https://www.linkedin.com/in/liamelliott/" target="_blank" class="link-transition linkedin link dib z-999 pt3 pt0-l mr1" title="LinkedIn link" rel="noopener" aria-label="follow on LinkedIn——Opens in a new window">
+  <svg  height="32px"  style="enable-background:new 0 0 65 65;" version="1.1" viewBox="0 0 65 65" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <path d="M50.837,48.137V36.425c0-6.275-3.35-9.195-7.816-9.195  c-3.604,0-5.219,1.983-6.119,3.374V27.71h-6.79c0.09,1.917,0,20.427,0,20.427h6.79V36.729c0-0.609,0.044-1.219,0.224-1.655  c0.49-1.22,1.607-2.483,3.482-2.483c2.458,0,3.44,1.873,3.44,4.618v10.929H50.837z M22.959,24.922c2.367,0,3.842-1.57,3.842-3.531  c-0.044-2.003-1.475-3.528-3.797-3.528s-3.841,1.524-3.841,3.528c0,1.961,1.474,3.531,3.753,3.531H22.959z M34,64  C17.432,64,4,50.568,4,34C4,17.431,17.432,4,34,4s30,13.431,30,30C64,50.568,50.568,64,34,64z M26.354,48.137V27.71h-6.789v20.427  H26.354z" style="fill-rule:evenodd;clip-rule:evenodd;fill:;"/>
+</svg>
+
+<span class="new-window"><svg  height="8px"  style="enable-background:new 0 0 1000 1000;" version="1.1" viewBox="0 0 1000 1000" width="8px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+<path d="M598 128h298v298h-86v-152l-418 418-60-60 418-418h-152v-86zM810 810v-298h86v298c0 46-40 86-86 86h-596c-48 0-86-40-86-86v-596c0-46 38-86 86-86h298v86h-298v596h596z" style="fill-rule:evenodd;clip-rule:evenodd;fill:;"/>
+</svg>
+</span></a>
+
+
+<a href="https://github.com/LiamElliott-au" target="_blank" class="link-transition github link dib z-999 pt3 pt0-l mr1" title="Github link" rel="noopener" aria-label="follow on Github——Opens in a new window">
+  <svg  height="32px"  style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+  <path d="M256,32C132.3,32,32,134.8,32,261.7c0,101.5,64.2,187.5,153.2,217.9c11.2,2.1,15.3-5,15.3-11.1   c0-5.5-0.2-19.9-0.3-39.1c-62.3,13.9-75.5-30.8-75.5-30.8c-10.2-26.5-24.9-33.6-24.9-33.6c-20.3-14.3,1.5-14,1.5-14   c22.5,1.6,34.3,23.7,34.3,23.7c20,35.1,52.4,25,65.2,19.1c2-14.8,7.8-25,14.2-30.7c-49.7-5.8-102-25.5-102-113.5   c0-25.1,8.7-45.6,23-61.6c-2.3-5.8-10-29.2,2.2-60.8c0,0,18.8-6.2,61.6,23.5c17.9-5.1,37-7.6,56.1-7.7c19,0.1,38.2,2.6,56.1,7.7   c42.8-29.7,61.5-23.5,61.5-23.5c12.2,31.6,4.5,55,2.2,60.8c14.3,16.1,23,36.6,23,61.6c0,88.2-52.4,107.6-102.3,113.3   c8,7.1,15.2,21.1,15.2,42.5c0,30.7-0.3,55.5-0.3,63c0,6.1,4,13.3,15.4,11C415.9,449.1,480,363.1,480,261.7   C480,134.8,379.7,32,256,32z"/>
+</svg>
+
+<span class="new-window"><svg  height="8px"  style="enable-background:new 0 0 1000 1000;" version="1.1" viewBox="0 0 1000 1000" width="8px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+<path d="M598 128h298v298h-86v-152l-418 418-60-60 418-418h-152v-86zM810 810v-298h86v298c0 46-40 86-86 86h-596c-48 0-86-40-86-86v-596c0-46 38-86 86-86h298v86h-298v596h596z" style="fill-rule:evenodd;clip-rule:evenodd;fill:;"/>
+</svg>
+</span></a>
+
+
+
+
+
+
+
+<a href="index.xml" target="_blank" class="link-transition rss link dib z-999 pt3 pt0-l mr1" title="RSS link" rel="noopener" aria-label="RSS——Opens in a new window">
+  <svg xmlns="http://www.w3.org/2000/svg" height="32px" width="32px" viewBox="0 0 24 24">
+    <circle cx="6.18" cy="17.82" r="2.18"/>
+    <path id="scale" d="M4 4.44v2.83c7.03 0 12.73 5.7 12.73 12.73h2.83c0-8.59-6.97-15.56-15.56-15.56zm0 5.66v2.83c3.9 0 7.07 3.17 7.07 7.07h2.83c0-5.47-4.43-9.9-9.9-9.9z"/>
+</svg>
+
+
+<span class="new-window"><svg  height="8px"  style="enable-background:new 0 0 1000 1000;" version="1.1" viewBox="0 0 1000 1000" width="8px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+<path d="M598 128h298v298h-86v-152l-418 418-60-60 418-418h-152v-86zM810 810v-298h86v298c0 46-40 86-86 86h-596c-48 0-86-40-86-86v-596c0-46 38-86 86-86h298v86h-298v596h596z" style="fill-rule:evenodd;clip-rule:evenodd;fill:;"/>
+</svg>
+</span></a>
+
+</div>
+  </div>
+</footer>
+
+  
+
+  <script src="/dist/js/app.3fc0f988d21662902933.js"></script>
+
+
+</body>
+
+</html>

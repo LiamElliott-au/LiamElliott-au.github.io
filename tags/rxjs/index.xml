@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>rxjs on Liam Elliott</title>
+    <link>https://drafts.liamelliott.me/tags/rxjs/</link>
+    <description>Recent content in rxjs on Liam Elliott</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 03 Jun 2018 23:17:00 +0000</lastBuildDate><atom:link href="https://drafts.liamelliott.me/tags/rxjs/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>RxJS refactor: BehaviourSubjects</title>
+      <link>https://drafts.liamelliott.me/coding/2018-06-03-rxjs-refactor-behavioursubjects/</link>
+      <pubDate>Sun, 03 Jun 2018 23:17:00 +0000</pubDate>
+      
+      <guid>https://drafts.liamelliott.me/coding/2018-06-03-rxjs-refactor-behavioursubjects/</guid>
+      <description>&lt;p&gt;In an earlier &lt;a href=&#34;https://drafts.liamelliott.me/coding/2018-03-26-rxjs-combinelatest-startwith/&#34;&gt;post&lt;/a&gt; I described how to leverage the power of RxJS and the combineLatest() and startWith() operators to tidy up my code. I have since updated the code on that page to reflect the new RxJS6 pipe operators.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Angular: arrrgh... too many async bindings</title>
+      <link>https://drafts.liamelliott.me/coding/2018-05-01-angular-too-many-async-bindings/</link>
+      <pubDate>Tue, 01 May 2018 00:52:00 +0000</pubDate>
+      
+      <guid>https://drafts.liamelliott.me/coding/2018-05-01-angular-too-many-async-bindings/</guid>
+      <description>In my previous post I came across a quirk with Angular, Observables and the Async pipe. That is, each subscription to an observable will initiate the observables execution. Hence we were calling the api once per async subscription.
+ A subscribe call is simply a way to start an &amp;ldquo;Observable execution&amp;rdquo; and deliver values or events to an Observer of that execution. http://reactivex.io
+ Original version &amp;lt;p&amp;gt;{{ (result$ | async).name }}&amp;lt;/p&amp;gt; &amp;lt;p&amp;gt;{{ (result$ | async).</description>
+    </item>
+    
+    <item>
+      <title>RxJS: Using CombineLatest() &#43; StartWith() to remove code duplication</title>
+      <link>https://drafts.liamelliott.me/coding/2018-03-26-rxjs-combinelatest-startwith/</link>
+      <pubDate>Mon, 26 Mar 2018 19:45:00 +0000</pubDate>
+      
+      <guid>https://drafts.liamelliott.me/coding/2018-03-26-rxjs-combinelatest-startwith/</guid>
+      <description>05 June 2018 Update: Follow up post with further refactoring.
+01 June 2018 Update: Updated code to RxJS6.
+Scenario: In my Angular5 application I have a search results page that contains three components:
+ Text-based filters component Paged results list Pagination component  After wiring up my code I ended up with something similar to below. This all worked fine, but as you can see it&amp;rsquo;s quite repetitive and not to mention hard to maintain.</description>
+    </item>
+    
+  </channel>
+</rss>

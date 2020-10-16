@@ -4,105 +4,259 @@
   
   <url>
     <loc>https://drafts.liamelliott.me/coding/</loc>
-    <lastmod>2020-06-01T09:42:48+00:00</lastmod>
+    <lastmod>2020-06-01T15:10:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://drafts.liamelliott.me/coding/hardcoding-have-your-cake/</loc>
-    <lastmod>2020-06-01T09:42:48+00:00</lastmod>
+    <loc>https://drafts.liamelliott.me/coding/2020-06-01-hardcoding-have-your-cake/</loc>
+    <lastmod>2020-06-01T15:10:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://drafts.liamelliott.me/</loc>
-    <lastmod>2020-06-01T09:42:48+00:00</lastmod>
+    <lastmod>2020-06-01T15:10:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://drafts.liamelliott.me/tags/solid-principles/</loc>
-    <lastmod>2020-06-01T09:42:48+00:00</lastmod>
+    <lastmod>2020-06-01T15:10:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://drafts.liamelliott.me/tags/</loc>
-    <lastmod>2020-06-01T09:42:48+00:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://drafts.liamelliott.me/tags/lessons/</loc>
-    <lastmod>2019-03-08T09:42:48+00:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://drafts.liamelliott.me/coding/lessonsfromsuccessfulproject/</loc>
-    <lastmod>2019-03-08T09:42:48+00:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://drafts.liamelliott.me/tags/project/</loc>
-    <lastmod>2019-03-08T09:42:48+00:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://drafts.liamelliott.me/tags/success/</loc>
-    <lastmod>2019-03-08T09:42:48+00:00</lastmod>
+    <lastmod>2020-06-01T15:10:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://drafts.liamelliott.me/tags/.net/</loc>
-    <lastmod>2019-03-06T09:42:48+00:00</lastmod>
+    <lastmod>2019-03-06T15:10:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://drafts.liamelliott.me/tags/c#/</loc>
-    <lastmod>2019-03-06T09:42:48+00:00</lastmod>
+    <lastmod>2019-03-06T15:10:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://drafts.liamelliott.me/tags/gethashcode/</loc>
-    <lastmod>2019-03-06T09:42:48+00:00</lastmod>
+    <lastmod>2019-03-06T15:10:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://drafts.liamelliott.me/coding/gethashcode/</loc>
-    <lastmod>2019-03-06T09:42:48+00:00</lastmod>
+    <loc>https://drafts.liamelliott.me/coding/2019-03-06-gethashcode/</loc>
+    <lastmod>2019-03-06T15:10:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://drafts.liamelliott.me/tags/vs2017/</loc>
-    <lastmod>2019-03-06T09:42:48+00:00</lastmod>
+    <lastmod>2019-03-06T15:10:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://drafts.liamelliott.me/tags/vs2019/</loc>
-    <lastmod>2019-03-06T09:42:48+00:00</lastmod>
+    <lastmod>2019-03-06T15:10:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://drafts.liamelliott.me/categories/</loc>
+    <lastmod>2019-01-08T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://drafts.liamelliott.me/tags/goals/</loc>
+    <lastmod>2019-01-08T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://drafts.liamelliott.me/personal/2019-01-08-welcome-to-2019/</loc>
+    <lastmod>2019-01-08T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://drafts.liamelliott.me/personal/</loc>
+    <lastmod>2019-01-08T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://drafts.liamelliott.me/categories/personal/</loc>
+    <lastmod>2019-01-08T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://drafts.liamelliott.me/tags/angular/</loc>
+    <lastmod>2018-08-21T22:50:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://drafts.liamelliott.me/tags/asp-net-core/</loc>
+    <lastmod>2018-08-21T22:50:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://drafts.liamelliott.me/tags/realtime/</loc>
+    <lastmod>2018-08-21T22:50:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://drafts.liamelliott.me/tags/signalr/</loc>
+    <lastmod>2018-08-21T22:50:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://drafts.liamelliott.me/coding/2018-08-21-signalr/</loc>
+    <lastmod>2018-08-21T22:50:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://drafts.liamelliott.me/tags/behavioursubject/</loc>
+    <lastmod>2018-06-03T23:17:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://drafts.liamelliott.me/tags/rxjs/</loc>
+    <lastmod>2018-06-03T23:17:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://drafts.liamelliott.me/coding/2018-06-03-rxjs-refactor-behavioursubjects/</loc>
+    <lastmod>2018-06-03T23:17:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://drafts.liamelliott.me/coding/2018-05-31-angular6-runtime-environment-variables/</loc>
+    <lastmod>2018-05-31T22:44:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://drafts.liamelliott.me/tags/environment-variables/</loc>
+    <lastmod>2018-05-31T22:44:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://drafts.liamelliott.me/coding/2018-05-04-ng-directive-thought-experiment/</loc>
+    <lastmod>2018-05-04T03:12:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://drafts.liamelliott.me/coding/2018-05-01-angular-too-many-async-bindings/</loc>
+    <lastmod>2018-05-01T00:52:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://drafts.liamelliott.me/tags/async/</loc>
+    <lastmod>2018-05-01T00:52:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://drafts.liamelliott.me/coding/2018-03-26-rxjs-combinelatest-startwith/</loc>
+    <lastmod>2018-03-26T19:45:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://drafts.liamelliott.me/categories/books/</loc>
+    <lastmod>2018-03-22T20:50:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://drafts.liamelliott.me/reading/</loc>
+    <lastmod>2018-03-22T20:50:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://drafts.liamelliott.me/reading/2018-03-22-extreme-ownership/</loc>
+    <lastmod>2018-03-22T20:50:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://drafts.liamelliott.me/tags/leadership/</loc>
+    <lastmod>2018-03-22T20:50:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://drafts.liamelliott.me/tags/reading/</loc>
+    <lastmod>2018-03-22T20:50:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://drafts.liamelliott.me/tags/about/</loc>
+    <lastmod>2018-02-22T01:03:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://drafts.liamelliott.me/personal/2018-02-22-welcome/</loc>
+    <lastmod>2018-02-22T01:03:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -114,13 +268,13 @@
   </url>
   
   <url>
-    <loc>https://drafts.liamelliott.me/reading/</loc>
+    <loc>https://drafts.liamelliott.me/tags/lessons/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://drafts.liamelliott.me/categories/</loc>
+    <loc>https://drafts.liamelliott.me/personal/2019-03-08-lessonsfromsuccessfulproject/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -132,7 +286,13 @@
   </url>
   
   <url>
-    <loc>https://drafts.liamelliott.me/personal/</loc>
+    <loc>https://drafts.liamelliott.me/tags/project/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://drafts.liamelliott.me/tags/success/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>

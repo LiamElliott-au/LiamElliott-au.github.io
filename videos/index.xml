@@ -5,10 +5,6 @@
     <link>https://drafts.liamelliott.me/videos/</link>
     <description>Recent content in Videos on Liam Elliott</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    
-	<atom:link href="https://drafts.liamelliott.me/videos/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <language>en-us</language><atom:link href="https://drafts.liamelliott.me/videos/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

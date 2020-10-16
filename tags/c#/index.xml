@@ -6,20 +6,14 @@
     <description>Recent content in c# on Liam Elliott</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 06 Mar 2019 09:42:48 +0000</lastBuildDate>
-    
-	<atom:link href="https://drafts.liamelliott.me/tags/c#/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Wed, 06 Mar 2019 15:10:00 +0000</lastBuildDate><atom:link href="https://drafts.liamelliott.me/tags/c#/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>GetHashCode() the easy way</title>
-      <link>https://drafts.liamelliott.me/coding/gethashcode/</link>
-      <pubDate>Wed, 06 Mar 2019 09:42:48 +0000</pubDate>
+      <link>https://drafts.liamelliott.me/coding/2019-03-06-gethashcode/</link>
+      <pubDate>Wed, 06 Mar 2019 15:10:00 +0000</pubDate>
       
-      <guid>https://drafts.liamelliott.me/coding/gethashcode/</guid>
-      <description>tl;dr Let Visual Studio generate your overrides for Equals() and GetHashCode() so you don&amp;rsquo;t need to remember the best practices.
-Don&amp;rsquo;t roll your own GetHashCode() algorithm or even rely on StackOverflow, use the .net framework to work it out for you..
-HashCode.Combine(Long, Lat, Altitude); Background When trying to check the equality of reference objects in c# we simply cannot apply the &amp;lsquo;==&amp;rsquo; operator, as this will only compare memory locations and not data.</description>
+      <guid>https://drafts.liamelliott.me/coding/2019-03-06-gethashcode/</guid>
+      <description>Remembering the most appropriate way to calculate a hashcode was always difficult. But not anymore</description>
     </item>
     
   </channel>
