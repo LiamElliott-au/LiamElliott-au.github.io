@@ -9,10 +9,10 @@
     <lastBuildDate>Sun, 03 Jun 2018 23:17:00 +0000</lastBuildDate><atom:link href="https://drafts.liamelliott.me/tags/behavioursubject/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>RxJS refactor: BehaviourSubjects</title>
-      <link>https://drafts.liamelliott.me/coding/2018-06-03-rxjs-refactor-behavioursubjects/</link>
+      <link>https://drafts.liamelliott.me/blog/2018-06-03-rxjs-refactor-behavioursubjects/</link>
       <pubDate>Sun, 03 Jun 2018 23:17:00 +0000</pubDate>
       
-      <guid>https://drafts.liamelliott.me/coding/2018-06-03-rxjs-refactor-behavioursubjects/</guid>
+      <guid>https://drafts.liamelliott.me/blog/2018-06-03-rxjs-refactor-behavioursubjects/</guid>
       <description>Using RxJS BehaviourSubjects to tidy up our code and remove tight coupling between the Template and the component, whilst also providing hooks  to trigger data updates.</description>
     </item>
     

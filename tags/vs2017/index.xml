@@ -9,10 +9,10 @@
     <lastBuildDate>Wed, 06 Mar 2019 15:10:00 +0000</lastBuildDate><atom:link href="https://drafts.liamelliott.me/tags/vs2017/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>GetHashCode() the easy way</title>
-      <link>https://drafts.liamelliott.me/coding/2019-03-06-gethashcode/</link>
+      <link>https://drafts.liamelliott.me/blog/2019-03-06-gethashcode/</link>
       <pubDate>Wed, 06 Mar 2019 15:10:00 +0000</pubDate>
       
-      <guid>https://drafts.liamelliott.me/coding/2019-03-06-gethashcode/</guid>
+      <guid>https://drafts.liamelliott.me/blog/2019-03-06-gethashcode/</guid>
       <description>Remembering the most appropriate way to calculate a hashcode was always difficult. But not anymore</description>
     </item>
     
