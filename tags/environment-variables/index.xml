@@ -9,10 +9,10 @@
     <lastBuildDate>Thu, 31 May 2018 22:44:00 +0000</lastBuildDate><atom:link href="https://drafts.liamelliott.me/tags/environment-variables/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Angular6 Runtime environment Variables</title>
-      <link>https://drafts.liamelliott.me/coding/2018-05-31-angular6-runtime-environment-variables/</link>
+      <link>https://drafts.liamelliott.me/blog/2018-05-31-angular6-runtime-environment-variables/</link>
       <pubDate>Thu, 31 May 2018 22:44:00 +0000</pubDate>
       
-      <guid>https://drafts.liamelliott.me/coding/2018-05-31-angular6-runtime-environment-variables/</guid>
+      <guid>https://drafts.liamelliott.me/blog/2018-05-31-angular6-runtime-environment-variables/</guid>
       <description>&lt;p&gt;Out of the box, Angular provides a convenient method for setting environment variables for each our local dev environment and our production environment.&lt;/p&gt;</description>
     </item>
     
