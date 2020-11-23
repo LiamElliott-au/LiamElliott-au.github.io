@@ -28,13 +28,13 @@
   
 
   <meta property="og:title" content="RxJS refactor: BehaviourSubjects" />
-<meta property="og:description" content="In an earlier post I described how to leverage the power of RxJS and the combineLatest() and startWith() operators to tidy up my code. I have since updated the code on that page to reflect the new RxJS6 pipe operators." />
+<meta property="og:description" content="Using RxJS BehaviourSubjects to tidy up our code and remove tight coupling between the Template and the component, whilst also providing hooks  to trigger data updates." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://drafts.liamelliott.me/coding/2018-06-03-rxjs-refactor-behavioursubjects/" />
 <meta property="article:published_time" content="2018-06-03T23:17:00+00:00" />
 <meta property="article:modified_time" content="2018-06-03T23:17:00+00:00" />
 <meta itemprop="name" content="RxJS refactor: BehaviourSubjects">
-<meta itemprop="description" content="In an earlier post I described how to leverage the power of RxJS and the combineLatest() and startWith() operators to tidy up my code. I have since updated the code on that page to reflect the new RxJS6 pipe operators.">
+<meta itemprop="description" content="Using RxJS BehaviourSubjects to tidy up our code and remove tight coupling between the Template and the component, whilst also providing hooks  to trigger data updates.">
 <meta itemprop="datePublished" content="2018-06-03T23:17:00+00:00" />
 <meta itemprop="dateModified" content="2018-06-03T23:17:00+00:00" />
 <meta itemprop="wordCount" content="417">
@@ -44,7 +44,7 @@
 <meta itemprop="keywords" content="angular,rxjs,behavioursubject," />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="RxJS refactor: BehaviourSubjects"/>
-<meta name="twitter:description" content="In an earlier post I described how to leverage the power of RxJS and the combineLatest() and startWith() operators to tidy up my code. I have since updated the code on that page to reflect the new RxJS6 pipe operators."/>
+<meta name="twitter:description" content="Using RxJS BehaviourSubjects to tidy up our code and remove tight coupling between the Template and the component, whilst also providing hooks  to trigger data updates."/>
 
   
 </head>
@@ -325,7 +325,8 @@
        <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">currentPage$</span>.<span style="color:#a6e22e">next</span>(<span style="color:#ae81ff">1</span>);
        <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">filter$</span>.<span style="color:#a6e22e">next</span>(<span style="color:#e6db74">&#39;&#39;</span>);
    }
-</code></pre></div><p>Wow&hellip; From the original mess and duplicated code to this. Reactive programming and RxJS may have a steep learning curve, but once mastered can really tidy up your event based code. Thanks <a href="https://twitter.com/BenLesh">Ben</a> and the RxJS team</p><div class="mt6 instapaper_ignoref">
+</code></pre></div><p>Wow&hellip; From the original mess and duplicated code to this. Reactive programming and RxJS may have a steep learning curve, but once mastered can really tidy up your event based code. Thanks <a href="https://twitter.com/BenLesh">Ben</a> and the RxJS team</p>
+<div class="mt6 instapaper_ignoref">
         
         
       </div>
@@ -381,45 +382,51 @@
 
     <div class="flex-ns flex-wrap justify-around">
         
-<article class="br2 ba dark-gray b--black-10 mv3 mh2 w-100 w-50-m w-25-l mw6 ">
-  
-  
-  
-  <a href="https://drafts.liamelliott.me/coding/2018-05-31-angular6-runtime-environment-variables/">
-    <img src="https://drafts.liamelliott.me/images/headers/kristaps-grundsteins-548978-unsplash.jpg" class="db w-100 br2 br--top h5" style="object-fit: cover;"
-      alt="image from Angular6 Runtime environment Variables">
-  </a>
-  
 
-  <div class="pa2 ph3-ns pb3-ns">
-    <h1 class="f5 f4-ns w-100 mt1 mb0">Angular6 Runtime environment Variables</h1>
-    <h2 class="f7 f6-ns mt-0 gray">May 31, 2018</h2>
-    <p class="f6 lh-copy measure mt2 mid-gray">
-      <p>Out of the box, Angular provides a convenient method for setting environment variables for each our local dev environment and our production environment.</p>
-    </p>
+<article >
+  <a href="https://drafts.liamelliott.me/coding/2018-05-31-angular6-runtime-environment-variables/" class="db pv4 ph0-l no-underline black dim">
+  
+  
+  <div class="flex flex-column flex-row-ns">
+    <div class="pr3-ns mb4 mb0-ns w-100 w-40-ns">
+      
+      <img src="https://drafts.liamelliott.me/images/headers/kristaps-grundsteins-548978-unsplash.jpg" class="db" alt="image from Angular6 Runtime environment Variables">
+      
+    </div>
+      
+      <div class="w-100 w-60-ns pl3-ns">
+        <h1 class="f3 fw1 nt0 lh-title">Angular6 Runtime environment Variables</h1>
+        <p class="f6 lh-copy mv0">May 31, 2018</p>
+        <p class="f6 f5-l lh-copy">
+          <p>Out of the box, Angular provides a convenient method for setting environment variables for each our local dev environment and our production environment.</p>
+        </p>
+      </div>
   </div>
-  <a class="" href="https://drafts.liamelliott.me/coding/2018-05-31-angular6-runtime-environment-variables/"> more...</a>
+  </a>
 </article>
 
         
-<article class="br2 ba dark-gray b--black-10 mv3 mh2 w-100 w-50-m w-25-l mw6 ">
-  
-  
-  
-  <a href="https://drafts.liamelliott.me/coding/2018-08-21-signalr/">
-    <img src="https://drafts.liamelliott.me/images/headers/carlos-alberto-gomez-iniguez-253158-unsplash.jpg" class="db w-100 br2 br--top h5" style="object-fit: cover;"
-      alt="image from SignalR - Why? Because its easy">
-  </a>
-  
 
-  <div class="pa2 ph3-ns pb3-ns">
-    <h1 class="f5 f4-ns w-100 mt1 mb0">SignalR - Why? Because its easy</h1>
-    <h2 class="f7 f6-ns mt-0 gray">Aug 21, 2018</h2>
-    <p class="f6 lh-copy measure mt2 mid-gray">
-      <p>SignalR has been around for a few years now (since 2013), offering real-time notifications to our .Net applications.</p>
-    </p>
+<article >
+  <a href="https://drafts.liamelliott.me/coding/2018-08-21-signalr/" class="db pv4 ph0-l no-underline black dim">
+  
+  
+  <div class="flex flex-column flex-row-ns">
+    <div class="pr3-ns mb4 mb0-ns w-100 w-40-ns">
+      
+      <img src="https://drafts.liamelliott.me/images/headers/carlos-alberto-gomez-iniguez-253158-unsplash.jpg" class="db" alt="image from SignalR - Why? Because its easy">
+      
+    </div>
+      
+      <div class="w-100 w-60-ns pl3-ns">
+        <h1 class="f3 fw1 nt0 lh-title">SignalR - Why? Because its easy</h1>
+        <p class="f6 lh-copy mv0">Aug 21, 2018</p>
+        <p class="f6 f5-l lh-copy">
+          <p>SignalR has been around for a few years now (since 2013), offering real-time notifications to our .Net applications.</p>
+        </p>
+      </div>
   </div>
-  <a class="" href="https://drafts.liamelliott.me/coding/2018-08-21-signalr/"> more...</a>
+  </a>
 </article>
     </div>
 </footer></article>

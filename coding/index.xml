@@ -17,6 +17,15 @@
     </item>
     
     <item>
+      <title>Hardcoding. Have your cake and eat it</title>
+      <link>https://drafts.liamelliott.me/coding/my-new-post/</link>
+      <pubDate>Mon, 01 Jun 2020 15:10:00 +0000</pubDate>
+      
+      <guid>https://drafts.liamelliott.me/coding/my-new-post/</guid>
+      <description>One of the core principles of software that is drummed into new developers is &amp;lsquo;Don&amp;rsquo;t Hardcode anything&amp;rsquo;. What if I told you that it&amp;rsquo;s OK to hardcode things? What if I told you that in some circumstances hardcoding is the RIGHT way to proceed?</description>
+    </item>
+    
+    <item>
       <title>GetHashCode() the easy way</title>
       <link>https://drafts.liamelliott.me/coding/2019-03-06-gethashcode/</link>
       <pubDate>Wed, 06 Mar 2019 15:10:00 +0000</pubDate>
@@ -40,7 +49,7 @@
       <pubDate>Sun, 03 Jun 2018 23:17:00 +0000</pubDate>
       
       <guid>https://drafts.liamelliott.me/coding/2018-06-03-rxjs-refactor-behavioursubjects/</guid>
-      <description>&lt;p&gt;In an earlier &lt;a href=&#34;https://drafts.liamelliott.me/coding/2018-03-26-rxjs-combinelatest-startwith/&#34;&gt;post&lt;/a&gt; I described how to leverage the power of RxJS and the combineLatest() and startWith() operators to tidy up my code. I have since updated the code on that page to reflect the new RxJS6 pipe operators.&lt;/p&gt;</description>
+      <description>Using RxJS BehaviourSubjects to tidy up our code and remove tight coupling between the Template and the component, whilst also providing hooks  to trigger data updates.</description>
     </item>
     
     <item>

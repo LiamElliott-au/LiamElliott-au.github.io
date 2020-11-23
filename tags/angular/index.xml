@@ -22,7 +22,7 @@
       <pubDate>Sun, 03 Jun 2018 23:17:00 +0000</pubDate>
       
       <guid>https://drafts.liamelliott.me/coding/2018-06-03-rxjs-refactor-behavioursubjects/</guid>
-      <description>&lt;p&gt;In an earlier &lt;a href=&#34;https://drafts.liamelliott.me/coding/2018-03-26-rxjs-combinelatest-startwith/&#34;&gt;post&lt;/a&gt; I described how to leverage the power of RxJS and the combineLatest() and startWith() operators to tidy up my code. I have since updated the code on that page to reflect the new RxJS6 pipe operators.&lt;/p&gt;</description>
+      <description>Using RxJS BehaviourSubjects to tidy up our code and remove tight coupling between the Template and the component, whilst also providing hooks  to trigger data updates.</description>
     </item>
     
     <item>

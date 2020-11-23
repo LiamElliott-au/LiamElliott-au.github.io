@@ -417,26 +417,29 @@
         
 
         
-<article class="br2 ba dark-gray b--black-10 mv3 mh2 w-100 w-50-m w-25-l mw6 ">
-  
-  
-  
-  <a href="https://drafts.liamelliott.me/coding/2018-05-01-angular-too-many-async-bindings/">
-    <img src="https://drafts.liamelliott.me/images/headers/john-westrock-647093-unsplash.jpg" class="db w-100 br2 br--top h5" style="object-fit: cover;"
-      alt="image from Angular: arrrgh... too many async bindings">
-  </a>
-  
 
-  <div class="pa2 ph3-ns pb3-ns">
-    <h1 class="f5 f4-ns w-100 mt1 mb0">Angular: arrrgh... too many async bindings</h1>
-    <h2 class="f7 f6-ns mt-0 gray">May 1, 2018</h2>
-    <p class="f6 lh-copy measure mt2 mid-gray">
-      In my previous post I came across a quirk with Angular, Observables and the Async pipe. That is, each subscription to an observable will initiate the observables execution. Hence we were calling the api once per async subscription.
+<article >
+  <a href="https://drafts.liamelliott.me/coding/2018-05-01-angular-too-many-async-bindings/" class="db pv4 ph0-l no-underline black dim">
+  
+  
+  <div class="flex flex-column flex-row-ns">
+    <div class="pr3-ns mb4 mb0-ns w-100 w-40-ns">
+      
+      <img src="https://drafts.liamelliott.me/images/headers/john-westrock-647093-unsplash.jpg" class="db" alt="image from Angular: arrrgh... too many async bindings">
+      
+    </div>
+      
+      <div class="w-100 w-60-ns pl3-ns">
+        <h1 class="f3 fw1 nt0 lh-title">Angular: arrrgh... too many async bindings</h1>
+        <p class="f6 lh-copy mv0">May 1, 2018</p>
+        <p class="f6 f5-l lh-copy">
+          In my previous post I came across a quirk with Angular, Observables and the Async pipe. That is, each subscription to an observable will initiate the observables execution. Hence we were calling the api once per async subscription.
  A subscribe call is simply a way to start an &ldquo;Observable execution&rdquo; and deliver values or events to an Observer of that execution. http://reactivex.io
  Original version &lt;p&gt;{{ (result$ | async).name }}&lt;/p&gt; &lt;p&gt;{{ (result$ | async).
-    </p>
+        </p>
+      </div>
   </div>
-  <a class="" href="https://drafts.liamelliott.me/coding/2018-05-01-angular-too-many-async-bindings/"> more...</a>
+  </a>
 </article>
     </div>
 </footer></article>

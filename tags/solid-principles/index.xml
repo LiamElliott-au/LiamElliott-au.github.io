@@ -16,5 +16,14 @@
       <description>&lt;p&gt;As a junior developer, one of the key principles that were drummed into me was that hardcoding values is a BAD thing (amongst many other principles). But then more often than not, the pressures of deadlines, project managers and product owners don&amp;rsquo;t afford us the luxury of building an engineered solution the first time around. So we revert to simply hardcoding just to keep everyone happy and deliver a feature. What no one ever mentions is that there are two ways to hardcode values: the RIGHT way and the WRONG way.&lt;/p&gt;</description>
     </item>
     
+    <item>
+      <title>Hardcoding. Have your cake and eat it</title>
+      <link>https://drafts.liamelliott.me/coding/my-new-post/</link>
+      <pubDate>Mon, 01 Jun 2020 15:10:00 +0000</pubDate>
+      
+      <guid>https://drafts.liamelliott.me/coding/my-new-post/</guid>
+      <description>One of the core principles of software that is drummed into new developers is &amp;lsquo;Don&amp;rsquo;t Hardcode anything&amp;rsquo;. What if I told you that it&amp;rsquo;s OK to hardcode things? What if I told you that in some circumstances hardcoding is the RIGHT way to proceed?</description>
+    </item>
+    
   </channel>
 </rss>
