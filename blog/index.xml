@@ -17,6 +17,15 @@
     </item>
     
     <item>
+      <title>Lessons from a successful project</title>
+      <link>https://drafts.liamelliott.me/blog/2019-03-08-lessonsfromsuccessfulproject/</link>
+      <pubDate>Fri, 08 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://drafts.liamelliott.me/blog/2019-03-08-lessonsfromsuccessfulproject/</guid>
+      <description>&lt;p&gt;A colleague and I recently finished a short 3-week project with a client, the result of which is one very happy client, and an MVP finished before the deadline. Below are the lessons that I learnt during that project.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
       <title>GetHashCode() the easy way</title>
       <link>https://drafts.liamelliott.me/blog/2019-03-06-gethashcode/</link>
       <pubDate>Wed, 06 Mar 2019 15:10:00 +0000</pubDate>
@@ -100,15 +109,6 @@ Scenario: In my Angular5 application I have a search results page that contains 
       
       <guid>https://drafts.liamelliott.me/blog/2018-02-22-welcome/</guid>
       <description>It&amp;rsquo;s time to stop procrastinating&amp;hellip; and to practice what I&amp;rsquo;ve been preaching for some time now</description>
-    </item>
-    
-    <item>
-      <title>Lessons from a successful project</title>
-      <link>https://drafts.liamelliott.me/blog/2019-03-08-lessonsfromsuccessfulproject/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://drafts.liamelliott.me/blog/2019-03-08-lessonsfromsuccessfulproject/</guid>
-      <description>&lt;p&gt;A colleague and I recently finished a short 3-week project with a client, the result of which is one very happy client, and an MVP finished before the deadline. Below are the lessons that I learnt during that project.&lt;/p&gt;</description>
     </item>
     
   </channel>

@@ -17,20 +17,47 @@
     </item>
     
     <item>
+      <title>lessons</title>
+      <link>https://drafts.liamelliott.me/tags/lessons/</link>
+      <pubDate>Fri, 08 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://drafts.liamelliott.me/tags/lessons/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>personal</title>
+      <link>https://drafts.liamelliott.me/tags/personal/</link>
+      <pubDate>Fri, 08 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://drafts.liamelliott.me/tags/personal/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>project</title>
+      <link>https://drafts.liamelliott.me/tags/project/</link>
+      <pubDate>Fri, 08 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://drafts.liamelliott.me/tags/project/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>success</title>
+      <link>https://drafts.liamelliott.me/tags/success/</link>
+      <pubDate>Fri, 08 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://drafts.liamelliott.me/tags/success/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>.Net</title>
       <link>https://drafts.liamelliott.me/tags/.net/</link>
       <pubDate>Wed, 06 Mar 2019 15:10:00 +0000</pubDate>
       
       <guid>https://drafts.liamelliott.me/tags/.net/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>c#</title>
-      <link>https://drafts.liamelliott.me/tags/c#/</link>
-      <pubDate>Wed, 06 Mar 2019 15:10:00 +0000</pubDate>
-      
-      <guid>https://drafts.liamelliott.me/tags/c#/</guid>
       <description></description>
     </item>
     
@@ -67,15 +94,6 @@
       <pubDate>Tue, 08 Jan 2019 00:00:00 +0000</pubDate>
       
       <guid>https://drafts.liamelliott.me/tags/goals/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>personal</title>
-      <link>https://drafts.liamelliott.me/tags/personal/</link>
-      <pubDate>Tue, 08 Jan 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://drafts.liamelliott.me/tags/personal/</guid>
       <description></description>
     </item>
     
@@ -175,33 +193,6 @@
       <pubDate>Thu, 22 Feb 2018 01:03:00 +0000</pubDate>
       
       <guid>https://drafts.liamelliott.me/tags/about/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>lessons</title>
-      <link>https://drafts.liamelliott.me/tags/lessons/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://drafts.liamelliott.me/tags/lessons/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>project</title>
-      <link>https://drafts.liamelliott.me/tags/project/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://drafts.liamelliott.me/tags/project/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>success</title>
-      <link>https://drafts.liamelliott.me/tags/success/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://drafts.liamelliott.me/tags/success/</guid>
       <description></description>
     </item>
     
