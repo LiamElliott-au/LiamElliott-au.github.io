@@ -6,9 +6,24 @@
     <description>Recent content in Categories on Liam Elliott</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+    <lastBuildDate>Tue, 08 Jan 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://drafts.liamelliott.me/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>personal</title>
+      <link>https://drafts.liamelliott.me/categories/personal/</link>
+      <pubDate>Tue, 08 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://drafts.liamelliott.me/categories/personal/</guid>
+      <description></description>
+    </item>
     
-	<atom:link href="https://drafts.liamelliott.me/categories/index.xml" rel="self" type="application/rss+xml" />
-    
+    <item>
+      <title>books</title>
+      <link>https://drafts.liamelliott.me/categories/books/</link>
+      <pubDate>Thu, 22 Mar 2018 20:50:00 +0000</pubDate>
+      
+      <guid>https://drafts.liamelliott.me/categories/books/</guid>
+      <description></description>
+    </item>
     
   </channel>
 </rss>

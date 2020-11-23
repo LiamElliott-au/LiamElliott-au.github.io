@@ -6,16 +6,31 @@
     <description>Recent content in personal on Liam Elliott</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+    <lastBuildDate>Tue, 08 Jan 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://drafts.liamelliott.me/categories/personal/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>New years goals</title>
+      <link>https://drafts.liamelliott.me/personal/2019-01-08-welcome-to-2019/</link>
+      <pubDate>Tue, 08 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://drafts.liamelliott.me/personal/2019-01-08-welcome-to-2019/</guid>
+      <description>&lt;p&gt;I&amp;rsquo;ve never been one to set myself new years resolutions, not for any particular reason, I just don&amp;rsquo;t. However, last year I set myself several goals and/or challenges.&lt;/p&gt;</description>
+    </item>
     
-	<atom:link href="https://drafts.liamelliott.me/categories/personal/index.xml" rel="self" type="application/rss+xml" />
-    
+    <item>
+      <title>Welcome</title>
+      <link>https://drafts.liamelliott.me/personal/2018-02-22-welcome/</link>
+      <pubDate>Thu, 22 Feb 2018 01:03:00 +0000</pubDate>
+      
+      <guid>https://drafts.liamelliott.me/personal/2018-02-22-welcome/</guid>
+      <description>It&amp;rsquo;s time to stop procrastinating&amp;hellip; and to practice what I&amp;rsquo;ve been preaching for some time now</description>
+    </item>
     
     <item>
       <title>Lessons from a successful project</title>
-      <link>https://drafts.liamelliott.me/coding/2019-03-08-lessonsfromsuccessfulproject/</link>
+      <link>https://drafts.liamelliott.me/personal/2019-03-08-lessonsfromsuccessfulproject/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://drafts.liamelliott.me/coding/2019-03-08-lessonsfromsuccessfulproject/</guid>
+      <guid>https://drafts.liamelliott.me/personal/2019-03-08-lessonsfromsuccessfulproject/</guid>
       <description>&lt;p&gt;A colleague and I recently finished a short 3-week project with a client, the result of which is one very happy client, and an MVP finished before the deadline. Below are the lessons that I learnt during that project.&lt;/p&gt;</description>
     </item>
     

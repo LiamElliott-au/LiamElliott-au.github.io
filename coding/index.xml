@@ -6,38 +6,82 @@
     <description>Recent content in Code on Liam Elliott</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 01 Jun 2020 09:42:48 +0000</lastBuildDate>
-    
-	<atom:link href="https://drafts.liamelliott.me/coding/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Mon, 01 Jun 2020 15:10:00 +0000</lastBuildDate><atom:link href="https://drafts.liamelliott.me/coding/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Hardcoding. Have your cake and eat it</title>
-      <link>https://drafts.liamelliott.me/coding/hardcoding-have-your-cake/</link>
-      <pubDate>Mon, 01 Jun 2020 09:42:48 +0000</pubDate>
+      <link>https://drafts.liamelliott.me/coding/2020-06-01-hardcoding-have-your-cake/</link>
+      <pubDate>Mon, 01 Jun 2020 15:10:00 +0000</pubDate>
       
-      <guid>https://drafts.liamelliott.me/coding/hardcoding-have-your-cake/</guid>
-      <description>As a junior developer, one of the key principles that were drummed into me was that hardcoding values is a BAD thing (amongst many other principles). But then more often than not, the pressures of deadlines, project managers and product owners don&amp;rsquo;t afford us the luxury of building an engineered solution the first time around. So we revert to simply hardcoding just to keep everyone happy and deliver a feature. What no one ever mentions is that there are two ways to hardcode values: the RIGHT way and the WRONG way.</description>
-    </item>
-    
-    <item>
-      <title>Lessons from a successful project</title>
-      <link>https://drafts.liamelliott.me/coding/lessonsfromsuccessfulproject/</link>
-      <pubDate>Fri, 08 Mar 2019 09:42:48 +0000</pubDate>
-      
-      <guid>https://drafts.liamelliott.me/coding/lessonsfromsuccessfulproject/</guid>
-      <description>&lt;p&gt;A colleague and I recently finished a short 3-week project with a client, the result of which is one very happy client, and an MVP finished before the deadline. Below are the lessons that I learnt during that project.&lt;/p&gt;</description>
+      <guid>https://drafts.liamelliott.me/coding/2020-06-01-hardcoding-have-your-cake/</guid>
+      <description>&lt;p&gt;As a junior developer, one of the key principles that were drummed into me was that hardcoding values is a BAD thing (amongst many other principles). But then more often than not, the pressures of deadlines, project managers and product owners don&amp;rsquo;t afford us the luxury of building an engineered solution the first time around. So we revert to simply hardcoding just to keep everyone happy and deliver a feature. What no one ever mentions is that there are two ways to hardcode values: the RIGHT way and the WRONG way.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>GetHashCode() the easy way</title>
-      <link>https://drafts.liamelliott.me/coding/gethashcode/</link>
-      <pubDate>Wed, 06 Mar 2019 09:42:48 +0000</pubDate>
+      <link>https://drafts.liamelliott.me/coding/2019-03-06-gethashcode/</link>
+      <pubDate>Wed, 06 Mar 2019 15:10:00 +0000</pubDate>
       
-      <guid>https://drafts.liamelliott.me/coding/gethashcode/</guid>
-      <description>tl;dr Let Visual Studio generate your overrides for Equals() and GetHashCode() so you don&amp;rsquo;t need to remember the best practices.
-Don&amp;rsquo;t roll your own GetHashCode() algorithm or even rely on StackOverflow, use the .net framework to work it out for you..
-HashCode.Combine(Long, Lat, Altitude); Background When trying to check the equality of reference objects in c# we simply cannot apply the &amp;lsquo;==&amp;rsquo; operator, as this will only compare memory locations and not data.</description>
+      <guid>https://drafts.liamelliott.me/coding/2019-03-06-gethashcode/</guid>
+      <description>Remembering the most appropriate way to calculate a hashcode was always difficult. But not anymore</description>
+    </item>
+    
+    <item>
+      <title>SignalR - Why? Because its easy</title>
+      <link>https://drafts.liamelliott.me/coding/2018-08-21-signalr/</link>
+      <pubDate>Tue, 21 Aug 2018 22:50:00 +0000</pubDate>
+      
+      <guid>https://drafts.liamelliott.me/coding/2018-08-21-signalr/</guid>
+      <description>&lt;p&gt;SignalR has been around for a few years now (since 2013), offering real-time notifications to our .Net applications.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>RxJS refactor: BehaviourSubjects</title>
+      <link>https://drafts.liamelliott.me/coding/2018-06-03-rxjs-refactor-behavioursubjects/</link>
+      <pubDate>Sun, 03 Jun 2018 23:17:00 +0000</pubDate>
+      
+      <guid>https://drafts.liamelliott.me/coding/2018-06-03-rxjs-refactor-behavioursubjects/</guid>
+      <description>Using RxJS BehaviourSubjects to tidy up our code and remove tight coupling between the Template and the component, whilst also providing hooks  to trigger data updates.</description>
+    </item>
+    
+    <item>
+      <title>Angular6 Runtime environment Variables</title>
+      <link>https://drafts.liamelliott.me/coding/2018-05-31-angular6-runtime-environment-variables/</link>
+      <pubDate>Thu, 31 May 2018 22:44:00 +0000</pubDate>
+      
+      <guid>https://drafts.liamelliott.me/coding/2018-05-31-angular6-runtime-environment-variables/</guid>
+      <description>&lt;p&gt;Out of the box, Angular provides a convenient method for setting environment variables for each our local dev environment and our production environment.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Ng directive Thought Experiment</title>
+      <link>https://drafts.liamelliott.me/coding/2018-05-04-ng-directive-thought-experiment/</link>
+      <pubDate>Fri, 04 May 2018 03:12:00 +0000</pubDate>
+      
+      <guid>https://drafts.liamelliott.me/coding/2018-05-04-ng-directive-thought-experiment/</guid>
+      <description>&lt;p&gt;Not long after publishing my recent post on minimising Async bindings in Angular by using the *ngIf=&amp;ldquo;obs$ | async as obs&amp;rdquo;; construct, I received the following comment on twitter:&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Angular: arrrgh... too many async bindings</title>
+      <link>https://drafts.liamelliott.me/coding/2018-05-01-angular-too-many-async-bindings/</link>
+      <pubDate>Tue, 01 May 2018 00:52:00 +0000</pubDate>
+      
+      <guid>https://drafts.liamelliott.me/coding/2018-05-01-angular-too-many-async-bindings/</guid>
+      <description>In my previous post I came across a quirk with Angular, Observables and the Async pipe. That is, each subscription to an observable will initiate the observables execution. Hence we were calling the api once per async subscription.
+ A subscribe call is simply a way to start an &amp;ldquo;Observable execution&amp;rdquo; and deliver values or events to an Observer of that execution. http://reactivex.io
+ Original version &amp;lt;p&amp;gt;{{ (result$ | async).name }}&amp;lt;/p&amp;gt; &amp;lt;p&amp;gt;{{ (result$ | async).</description>
+    </item>
+    
+    <item>
+      <title>RxJS: Using CombineLatest() &#43; StartWith() to remove code duplication</title>
+      <link>https://drafts.liamelliott.me/coding/2018-03-26-rxjs-combinelatest-startwith/</link>
+      <pubDate>Mon, 26 Mar 2018 19:45:00 +0000</pubDate>
+      
+      <guid>https://drafts.liamelliott.me/coding/2018-03-26-rxjs-combinelatest-startwith/</guid>
+      <description>05 June 2018 Update: Follow up post with further refactoring.
+01 June 2018 Update: Updated code to RxJS6.
+Scenario: In my Angular5 application I have a search results page that contains three components:
+ Text-based filters component Paged results list Pagination component  After wiring up my code I ended up with something similar to below. This all worked fine, but as you can see it&amp;rsquo;s quite repetitive and not to mention hard to maintain.</description>
     </item>
     
   </channel>
